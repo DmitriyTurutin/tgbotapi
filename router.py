@@ -4,13 +4,16 @@ from fastapi.responses import FileResponse
 from datetime import datetime
 import os
 from dotenv import load_dotenv
+
 from UseCases.WebScrapping.WebScrapperService import WebScrapperService
 
 router = APIRouter()
+
 load_dotenv()
 
 
 class UpdateRequest(BaseModel):
+    url: str
     email: str
     password: str
 
@@ -23,7 +26,14 @@ class SalesRequest(BaseModel):
 @router.get("/update")
 async def update(request: UpdateRequest):
     scrapper = WebScrapperService()
-    scrapper.login(address=os.environ['URL'],
+    scrapper.login(address=request.url,
+                   email=request.email, password=request.password)
+    return {"response": "success"}
+
+@router.get("/scan")
+async def scan(request: UpdateRequest):
+    scrapper = WebScrapperService()
+    scrapper.scan(url=request.url,
                    email=request.email, password=request.password)
     return {"response": "success"}
 

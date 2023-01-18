@@ -111,6 +111,6 @@ class SalesRepository:
 
         return rows
 
-    def __del__(self):
-        self.conn.close()
-        self.cur.close()
+    # def __del__(self):
+    #     self.conn.close()
+    #     self.cur.close()
