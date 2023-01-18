@@ -110,7 +110,7 @@ class Scrapper:
         iter = 0
 
         li = ul.find_element(By.ID, "sales_next")
-        while "disabled" not in li.get_attribute("class") and iter < 99:
+        while "disabled" not in li.get_attribute("class") and iter < 20:
             iter += 1
             a.click()
             div = wait.until(EC.visibility_of_element_located((By.ID, "sales_paginate")))

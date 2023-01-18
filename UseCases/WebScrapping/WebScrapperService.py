@@ -12,12 +12,14 @@ from Infrastructure.GenerateBarPlot import GenerateBarPlot
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from Infrastructure.ScrapperService import Sale
+from Infrastructure.model import Model
 
 
 class WebScrapperService:
     salesRepository = SalesRepository()
     plotGenerator = GenerateBarPlot() 
     generateExcel = GenerateExcel()
+    model = Model()
  
 
     def login(self, address: str, email: str, password: str) -> None:
@@ -47,6 +49,7 @@ class WebScrapperService:
                     sale.payment_method,
                     sale.client,
                     sale.time_added)
+            self.model.generate_model()
         else:
             print("Sales is none!!")
 

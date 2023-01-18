@@ -1,7 +1,8 @@
 from fastapi import APIRouter, File, HTTPException
 from pydantic import BaseModel
 from fastapi.responses import FileResponse
-from datetime import datetime
+from datetime import datetime, timedelta
+import pickle
 import os
 from dotenv import load_dotenv
 
@@ -66,3 +67,31 @@ async def download_file(file_name: str):
 
     else:
         return HTTPException(status_code=404, detail="File not found")
+
+@router.get("/predict")
+async def predict(unique_visitors: int):
+
+    loaded_model = pickle.load(open('./Storage/linear_regression_model.pkl', 'rb'))
+
+    today = datetime.now()
+    one_day = timedelta(1)
+
+    tomorrow = today + one_day
+
+    month = tomorrow.month  
+    week_day = tomorrow.weekday()
+    next_day_features = [[week_day, month, unique_visitors]]
+    result = loaded_model.predict(next_day_features)
+
+    result = result[0]
+
+    return {"prediction": result}
+
+# @router.get("/predict")
+# async def predict(unique_visitors: int,week_day: int, month: int):
+#     with open('./Storage/model.pkl', 'rb') as f:
+#         model = pickle.load(f)
+
+#     type(model)
+#     prediction = model.predict([week_day, month, unique_visitors])
+#     return {"prediction": prediction}
