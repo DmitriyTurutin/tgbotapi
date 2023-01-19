@@ -1,4 +1,5 @@
 from Infrastructure.Persistence.SalesRepository import SalesRepository
+import pickle
 import pandas as pd
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import train_test_split
@@ -48,7 +49,9 @@ class Model:
         logging.info("Model for provided data trained")
         logging.info("Test score: %s", score)
 
-        dump(grid_search.best_estimator_, './Storage/model.pkl')
+        # save the model to disk
+        filename = './Storage/gradient_boosting_regressor_model.pkl'
+        pickle.dump(grid_search, open(filename, 'wb'))
 
 
         # make a prediction for the next day

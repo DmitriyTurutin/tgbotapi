@@ -61,7 +61,7 @@ class Scrapper:
 
         self.html.append(self.driver.page_source)
 
-        self.driver.quit()
+        # self.driver.quit()
 
         self.clean_data(self.html)
 

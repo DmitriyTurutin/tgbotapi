@@ -2983,3 +2983,31 @@ TimedPromise@chrome://remote/content/marionette/sync.sys.mjs:205:10
 interaction.flushEventLoop@chrome://remote/content/marionette/interaction.sys.mjs:425:10
 webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:173:31
 1674043715363	Marionette	INFO	Stopped listening on port 37025
+1674062644507	geckodriver	INFO	Listening on 127.0.0.1:56647
+1674062645067	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "34959" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilegNZSEA"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674062645612	Marionette	INFO	Marionette enabled
+1674062645615	Marionette	INFO	Listening on port 43271
+Read port: 43271
+WebDriver BiDi listening on ws://127.0.0.1:34959
+1674062645779	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilegNZSEA/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:34959/devtools/browser/6f37437e-aeb5-478a-a591-1087b8fb0c0a
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674062649186	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1674064449200	geckodriver	INFO	Listening on 127.0.0.1:41647
+1674064449760	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "59053" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilekMp6im"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674064450138	Marionette	INFO	Marionette enabled
+1674064450140	Marionette	INFO	Listening on port 42277
+Read port: 42277
+WebDriver BiDi listening on ws://127.0.0.1:59053
+1674064450224	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilekMp6im/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59053/devtools/browser/05dbb595-37cb-4e60-b20a-bb041f5c9c55
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1674067113063	Marionette	INFO	Stopped listening on port 42277
+Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
