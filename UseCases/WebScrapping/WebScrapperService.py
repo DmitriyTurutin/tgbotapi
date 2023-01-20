@@ -26,15 +26,23 @@ class WebScrapperService:
             print("Sales is none!!")
 
     def scan(self, url: str, email: str, password: str):
-        with concurrent.futures.ThreadPoolExecutor() as executor:
-            scrapper_future = executor.submit(Scrapper(url, email, password).scan)
-            sales = scrapper_future.result()
-            if sales:
-                with concurrent.futures.ThreadPoolExecutor() as executor:
-                    self.salesRepository.add(sales)
-                    # self.model.generate_model()
-            else:
-                print("Sales is none!!")
+        scrapper_service = Scrapper(url, email, password)
+        sales: list[Sale] = scrapper_service.scan()
+
+        if sales is not None:
+            for sale in sales:
+                self.salesRepository.add(sale)
+        else:
+            print("Sales is none!!")
+        # with concurrent.futures.ThreadPoolExecutor() as executor:
+        #     scrapper_future = executor.submit(Scrapper(url, email, password).scan)
+        #     sales = scrapper_future.result()
+        #     if sales:
+        #         with concurrent.futures.ThreadPoolExecutor() as executor:
+        #             self.salesRepository.add(sales)
+        #             # self.model.generate_model()
+        #     else:
+        #         print("Sales is none!!")
 
     # def scan(self, url: str, email: str, password: str):
     #     scrapper_service = Scrapper(url, email, password)

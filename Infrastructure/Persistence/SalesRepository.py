@@ -50,26 +50,27 @@ class SalesRepository:
         self.cur.execute(create_table_statement)
         self.conn.commit()
 
-
-    def add(self, sales: list[Sale]):
+    def add(self,
+            sale: Sale):
         insert_statement = """
         INSERT INTO sales (title, price, amount, payment_method, client, time_added)
         VALUES (%s, %s, %s, %s, %s, %s)
         ON CONFLICT (time_added) DO NOTHING"""
 
         try:
-            self.cur.executemany(insert_statement, [(
+            self.cur.execute(insert_statement, (
                 sale.title,
                 sale.price,
                 sale.amount,
                 sale.payment_method,
                 sale.client,
                 sale.time_added
-            ) for sale in sales])
+            ))
+
             self.conn.commit()
+
         except psycopg2.Error as e:
             print(e)
-
 
     def get_all(self):
         self.cur.execute("SELECT * FROM sales")
