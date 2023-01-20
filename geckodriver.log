@@ -2983,6 +2983,7 @@ TimedPromise@chrome://remote/content/marionette/sync.sys.mjs:205:10
 interaction.flushEventLoop@chrome://remote/content/marionette/interaction.sys.mjs:425:10
 webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:173:31
 1674043715363	Marionette	INFO	Stopped listening on port 37025
+<<<<<<< HEAD
 1674062644507	geckodriver	INFO	Listening on 127.0.0.1:56647
 1674062645067	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "34959" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilegNZSEA"
 [GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
@@ -3011,3 +3012,1240 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://
 JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
 1674067113063	Marionette	INFO	Stopped listening on port 42277
 Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
+=======
+1674230432367	geckodriver	INFO	Listening on 127.0.0.1:33891
+1674230432950	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "36237" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile5OCRSh"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674230433563	Marionette	INFO	Marionette enabled
+1674230433566	Marionette	INFO	Listening on port 44661
+Read port: 44661
+WebDriver BiDi listening on ws://127.0.0.1:36237
+1674230433708	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile5OCRSh/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:36237/devtools/browser/e04f0a06-a726-4528-9bff-87f216033e96
+1674231015626	geckodriver	INFO	Listening on 127.0.0.1:46883
+1674231016197	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "59553" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile8EnfQ4"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674231016609	Marionette	INFO	Marionette enabled
+1674231016613	Marionette	INFO	Listening on port 45735
+Read port: 45735
+WebDriver BiDi listening on ws://127.0.0.1:59553
+1674231016755	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile8EnfQ4/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59553/devtools/browser/cb646724-a590-43f2-9813-f0b97f0ba0a4
+1674231101956	geckodriver	INFO	Listening on 127.0.0.1:52897
+1674231101988	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "51069" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile9vNpAS"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674231102377	Marionette	INFO	Marionette enabled
+1674231102380	Marionette	INFO	Listening on port 44443
+Read port: 44443
+WebDriver BiDi listening on ws://127.0.0.1:51069
+1674231102456	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile9vNpAS/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51069/devtools/browser/3a1b13ce-928f-4905-a020-3a986f5d6015
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1674231357461	geckodriver	INFO	Listening on 127.0.0.1:36285
+1674231358028	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "34145" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile5pGdBL"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674231358509	Marionette	INFO	Marionette enabled
+1674231358513	Marionette	INFO	Listening on port 33411
+Read port: 33411
+WebDriver BiDi listening on ws://127.0.0.1:34145
+1674231358589	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile5pGdBL/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:34145/devtools/browser/182075d6-9431-4bb9-a8ff-db5291ae4f30
+1674231426170	geckodriver	INFO	Listening on 127.0.0.1:59035
+1674231426198	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "54141" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileEN3OTI"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674231426589	Marionette	INFO	Marionette enabled
+1674231426591	Marionette	INFO	Listening on port 37589
+Read port: 37589
+WebDriver BiDi listening on ws://127.0.0.1:54141
+1674231426667	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileEN3OTI/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54141/devtools/browser/54fa46e5-eb08-4736-9a6a-dc5e8976eab7
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1674231498437	geckodriver	INFO	Listening on 127.0.0.1:40355
+1674231499004	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "37823" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileB8GQud"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674231499478	Marionette	INFO	Marionette enabled
+1674231499484	Marionette	INFO	Listening on port 39177
+Read port: 39177
+WebDriver BiDi listening on ws://127.0.0.1:37823
+1674231499566	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileB8GQud/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:37823/devtools/browser/d89d62b9-9f16-41c6-98fc-b9b8421576f0
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674232983689	geckodriver	INFO	Listening on 127.0.0.1:60041
+1674232983719	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "41391" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilezckbKq"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674232984077	Marionette	INFO	Marionette enabled
+1674232984080	Marionette	INFO	Listening on port 34663
+Read port: 34663
+WebDriver BiDi listening on ws://127.0.0.1:41391
+1674232984215	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilezckbKq/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:41391/devtools/browser/f6d9acc9-2a3b-417b-bf30-f056635bf5a0
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674233573308	geckodriver	INFO	Listening on 127.0.0.1:43857
+1674233573849	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "43917" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileA3PgDX"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674233574285	Marionette	INFO	Marionette enabled
+1674233574288	Marionette	INFO	Listening on port 37777
+WebDriver BiDi listening on ws://127.0.0.1:43917
+Read port: 37777
+1674233574455	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileA3PgDX/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:43917/devtools/browser/d0d2e44b-5cb5-402c-862c-f7417f215e97
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674233688935	geckodriver	INFO	Listening on 127.0.0.1:41435
+1674233688963	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "44267" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile2jQ2CJ"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674233689306	Marionette	INFO	Marionette enabled
+1674233689308	Marionette	INFO	Listening on port 34633
+WebDriver BiDi listening on ws://127.0.0.1:44267
+Read port: 34633
+1674233689446	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile2jQ2CJ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:44267/devtools/browser/20d90920-318c-4c86-971a-c1f21330e645
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674233715491	Marionette	INFO	Stopped listening on port 34633
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1674233832499	geckodriver	INFO	Listening on 127.0.0.1:38547
+1674233832531	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "35353" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilelkI9xn"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674233832877	Marionette	INFO	Marionette enabled
+1674233832879	Marionette	INFO	Listening on port 46005
+WebDriver BiDi listening on ws://127.0.0.1:35353
+Read port: 46005
+1674233833017	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilelkI9xn/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:35353/devtools/browser/bbbf2c83-1425-4cc8-94b8-e1907888c721
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674233843192	Marionette	INFO	Stopped listening on port 46005
+1674233905906	geckodriver	INFO	Listening on 127.0.0.1:53119
+1674233905937	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "52153" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilew9koo7"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674233906316	Marionette	INFO	Marionette enabled
+1674233906319	Marionette	INFO	Listening on port 34593
+Read port: 34593
+WebDriver BiDi listening on ws://127.0.0.1:52153
+1674233906388	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilew9koo7/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52153/devtools/browser/5abf66bd-25af-4753-833a-b217fdb5cd40
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674233915884	Marionette	INFO	Stopped listening on port 34593
+1674233986362	geckodriver	INFO	Listening on 127.0.0.1:55213
+1674233986402	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "36341" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileJrPh0Y"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674233986803	Marionette	INFO	Marionette enabled
+1674233986806	Marionette	INFO	Listening on port 35935
+WebDriver BiDi listening on ws://127.0.0.1:36341
+Read port: 35935
+1674233986976	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileJrPh0Y/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:36341/devtools/browser/10a8ab66-8fcf-4f60-b7b1-b15a3b683c95
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674234023558	Marionette	INFO	Stopped listening on port 35935
+1674238542045	geckodriver	INFO	Listening on 127.0.0.1:55395
+1674238542072	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "34631" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileOlSAbz"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674238542415	Marionette	INFO	Marionette enabled
+1674238542417	Marionette	INFO	Listening on port 43803
+WebDriver BiDi listening on ws://127.0.0.1:34631
+Read port: 43803
+1674238542553	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileOlSAbz/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:34631/devtools/browser/93529de4-fb49-405a-a7f1-723b665f439e
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674238563552	geckodriver	INFO	Listening on 127.0.0.1:34617
+1674238563583	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "57455" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileJVXqce"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674238563920	Marionette	INFO	Marionette enabled
+1674238563923	Marionette	INFO	Listening on port 38549
+WebDriver BiDi listening on ws://127.0.0.1:57455
+Read port: 38549
+1674238564086	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileJVXqce/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57455/devtools/browser/a32258f3-e0a9-4ead-9358-203052242cc1
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674238566429	Marionette	INFO	Stopped listening on port 38549
+1674238622077	geckodriver	INFO	Listening on 127.0.0.1:54103
+1674238622105	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "39355" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilesnCzw0"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674238622507	Marionette	INFO	Marionette enabled
+1674238622511	Marionette	INFO	Listening on port 37983
+WebDriver BiDi listening on ws://127.0.0.1:39355
+Read port: 37983
+1674238622714	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilesnCzw0/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:39355/devtools/browser/8c9ad974-970c-4dd4-b390-0fc6a9d0a685
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674238625371	Marionette	INFO	Stopped listening on port 37983
+1674238708658	geckodriver	INFO	Listening on 127.0.0.1:35877
+1674238708685	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "37671" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile5sr1ZK"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674238709018	Marionette	INFO	Marionette enabled
+1674238709021	Marionette	INFO	Listening on port 37459
+WebDriver BiDi listening on ws://127.0.0.1:37671
+Read port: 37459
+1674238709179	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile5sr1ZK/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:37671/devtools/browser/d1e385c8-b707-4323-9a3f-8a62736ee04f
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674238711674	Marionette	INFO	Stopped listening on port 37459
+1674238743164	geckodriver	INFO	Listening on 127.0.0.1:48847
+1674238743192	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "37009" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileBpSQhT"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674238743545	Marionette	INFO	Marionette enabled
+1674238743548	Marionette	INFO	Listening on port 45863
+Read port: 45863
+WebDriver BiDi listening on ws://127.0.0.1:37009
+1674238743648	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileBpSQhT/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:37009/devtools/browser/63d28994-54be-483b-b64a-d4b606525afe
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674238746218	Marionette	INFO	Stopped listening on port 45863
+1674238778074	geckodriver	INFO	Listening on 127.0.0.1:60041
+1674238778107	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "35149" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiletqbxkx"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674238778445	Marionette	INFO	Marionette enabled
+1674238778447	Marionette	INFO	Listening on port 37703
+WebDriver BiDi listening on ws://127.0.0.1:35149
+Read port: 37703
+1674238778602	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiletqbxkx/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:35149/devtools/browser/df321c29-d87f-46f0-aab6-ac4a421dc588
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674238781246	Marionette	INFO	Stopped listening on port 37703
+1674238818504	geckodriver	INFO	Listening on 127.0.0.1:53275
+1674238818531	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "53039" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilewo7uot"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674238818913	Marionette	INFO	Marionette enabled
+1674238818916	Marionette	INFO	Listening on port 41037
+Read port: 41037
+WebDriver BiDi listening on ws://127.0.0.1:53039
+1674238819003	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilewo7uot/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53039/devtools/browser/9c075855-4988-4ef7-8f60-b5ff4bb57f63
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674238821732	Marionette	INFO	Stopped listening on port 41037
+1674238860048	geckodriver	INFO	Listening on 127.0.0.1:41123
+1674238860076	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "46577" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilemdvAnK"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674238860428	Marionette	INFO	Marionette enabled
+1674238860430	Marionette	INFO	Listening on port 39427
+Read port: 39427
+WebDriver BiDi listening on ws://127.0.0.1:46577
+1674238860511	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilemdvAnK/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:46577/devtools/browser/1001681a-a659-498e-b773-255f4dab1352
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674238863035	Marionette	INFO	Stopped listening on port 39427
+1674238921457	geckodriver	INFO	Listening on 127.0.0.1:58233
+1674238921484	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "50493" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile4uABx1"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674238921820	Marionette	INFO	Marionette enabled
+1674238921822	Marionette	INFO	Listening on port 36283
+WebDriver BiDi listening on ws://127.0.0.1:50493
+Read port: 36283
+1674238921976	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile4uABx1/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50493/devtools/browser/8138cefc-1fc5-4ac9-984e-e11fa6d97f5d
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674238924511	Marionette	INFO	Stopped listening on port 36283
+1674238973088	geckodriver	INFO	Listening on 127.0.0.1:39303
+1674238973118	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "47875" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileQFkitY"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674238973483	Marionette	INFO	Marionette enabled
+1674238973487	Marionette	INFO	Listening on port 32783
+Read port: 32783
+WebDriver BiDi listening on ws://127.0.0.1:47875
+1674238973612	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileQFkitY/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:47875/devtools/browser/ec9d8542-dc1d-4315-a225-be8476c1cbbf
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674238976228	Marionette	INFO	Stopped listening on port 32783
+1674239017194	geckodriver	INFO	Listening on 127.0.0.1:45739
+1674239017222	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "34123" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileINqncl"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674239017560	Marionette	INFO	Marionette enabled
+1674239017563	Marionette	INFO	Listening on port 33239
+WebDriver BiDi listening on ws://127.0.0.1:34123
+Read port: 33239
+1674239017718	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileINqncl/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:34123/devtools/browser/d51823f6-519e-4732-95cf-0a30b6b74e6e
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674239020085	Marionette	INFO	Stopped listening on port 33239
+1674239174898	geckodriver	INFO	Listening on 127.0.0.1:60107
+1674239174925	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "33151" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileaqIi68"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674239175254	Marionette	INFO	Marionette enabled
+1674239175257	Marionette	INFO	Listening on port 35667
+WebDriver BiDi listening on ws://127.0.0.1:33151
+Read port: 35667
+1674239175416	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileaqIi68/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:33151/devtools/browser/d274c64b-80bd-457f-bb9b-f372191a1430
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674239177982	Marionette	INFO	Stopped listening on port 35667
+1674239215191	geckodriver	INFO	Listening on 127.0.0.1:45449
+1674239215220	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "41575" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile77SoNE"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674239215563	Marionette	INFO	Marionette enabled
+1674239215566	Marionette	INFO	Listening on port 33809
+WebDriver BiDi listening on ws://127.0.0.1:41575
+Read port: 33809
+1674239215702	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile77SoNE/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:41575/devtools/browser/15f239dd-1a0f-4434-8b7e-6b23d57bb9d1
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674239218271	Marionette	INFO	Stopped listening on port 33809
+1674239283758	geckodriver	INFO	Listening on 127.0.0.1:50695
+1674239283785	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "55881" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileJtHsdj"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674239284133	Marionette	INFO	Marionette enabled
+1674239284136	Marionette	INFO	Listening on port 36217
+WebDriver BiDi listening on ws://127.0.0.1:55881
+Read port: 36217
+1674239284271	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileJtHsdj/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55881/devtools/browser/c7c1874a-8e48-46ec-81d2-4457282c9105
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674239286740	Marionette	INFO	Stopped listening on port 36217
+1674239405624	geckodriver	INFO	Listening on 127.0.0.1:40237
+1674239405652	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "39373" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileNfrscl"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674239405985	Marionette	INFO	Marionette enabled
+1674239405988	Marionette	INFO	Listening on port 41935
+WebDriver BiDi listening on ws://127.0.0.1:39373
+Read port: 41935
+1674239406144	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileNfrscl/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:39373/devtools/browser/dedce7e6-38a9-4a28-a724-8a4822d8e1e2
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674239408488	Marionette	INFO	Stopped listening on port 41935
+1674239427438	geckodriver	INFO	Listening on 127.0.0.1:41551
+1674239427467	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "50723" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileadqHL3"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674239427810	Marionette	INFO	Marionette enabled
+1674239427813	Marionette	INFO	Listening on port 35853
+WebDriver BiDi listening on ws://127.0.0.1:50723
+Read port: 35853
+1674239427946	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileadqHL3/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50723/devtools/browser/dd445c18-2e7a-4d96-be50-7742b370f94d
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674239430411	Marionette	INFO	Stopped listening on port 35853
+1674239449081	geckodriver	INFO	Listening on 127.0.0.1:49337
+1674239449108	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "33465" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileMSo5Ca"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674239449441	Marionette	INFO	Marionette enabled
+1674239449443	Marionette	INFO	Listening on port 39017
+WebDriver BiDi listening on ws://127.0.0.1:33465
+Read port: 39017
+1674239449601	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileMSo5Ca/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:33465/devtools/browser/e51206e5-994b-4778-8917-321b21571b64
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674239451993	Marionette	INFO	Stopped listening on port 39017
+1674239572999	geckodriver	INFO	Listening on 127.0.0.1:53883
+1674239573031	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "44523" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiledZZcyx"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674239573372	Marionette	INFO	Marionette enabled
+1674239573374	Marionette	INFO	Listening on port 34015
+WebDriver BiDi listening on ws://127.0.0.1:44523
+Read port: 34015
+1674239573535	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiledZZcyx/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:44523/devtools/browser/b1feafd0-ca53-4cd5-b7d7-264471e6137d
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674239576147	Marionette	INFO	Stopped listening on port 34015
+1674239639030	geckodriver	INFO	Listening on 127.0.0.1:40791
+1674239639060	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "39051" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileOPRPPj"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674239639401	Marionette	INFO	Marionette enabled
+1674239639403	Marionette	INFO	Listening on port 33561
+WebDriver BiDi listening on ws://127.0.0.1:39051
+Read port: 33561
+1674239639556	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileOPRPPj/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:39051/devtools/browser/4ab0e94f-54d9-4539-97af-130f8d8e3de7
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674239642170	Marionette	INFO	Stopped listening on port 33561
+1674239677501	geckodriver	INFO	Listening on 127.0.0.1:55707
+1674239677528	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "56805" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiletIyc0R"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674239677882	Marionette	INFO	Marionette enabled
+1674239677884	Marionette	INFO	Listening on port 45457
+Read port: 45457
+WebDriver BiDi listening on ws://127.0.0.1:56805
+1674239677963	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiletIyc0R/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56805/devtools/browser/2ff41a3b-6714-4fc4-adc4-5578490e0129
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674239680369	Marionette	INFO	Stopped listening on port 45457
+1674239737218	geckodriver	INFO	Listening on 127.0.0.1:58357
+1674239737244	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "52667" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileGU5yPa"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674239737578	Marionette	INFO	Marionette enabled
+1674239737581	Marionette	INFO	Listening on port 35133
+WebDriver BiDi listening on ws://127.0.0.1:52667
+Read port: 35133
+1674239737738	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileGU5yPa/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52667/devtools/browser/f925e1ee-f7eb-4047-8182-38e17c999515
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674239740151	Marionette	INFO	Stopped listening on port 35133
+1674239818813	geckodriver	INFO	Listening on 127.0.0.1:57181
+1674239818840	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "57087" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilep3rR0g"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674239819209	Marionette	INFO	Marionette enabled
+1674239819212	Marionette	INFO	Listening on port 40109
+Read port: 40109
+WebDriver BiDi listening on ws://127.0.0.1:57087
+1674239819281	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilep3rR0g/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57087/devtools/browser/af107558-6ce9-4a8b-89cf-cfab1e7b354b
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674239821816	Marionette	INFO	Stopped listening on port 40109
+1674239876654	geckodriver	INFO	Listening on 127.0.0.1:34457
+1674239876681	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "55571" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilecwktHe"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674239877039	Marionette	INFO	Marionette enabled
+1674239877042	Marionette	INFO	Listening on port 42959
+Read port: 42959
+WebDriver BiDi listening on ws://127.0.0.1:55571
+1674239877115	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilecwktHe/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55571/devtools/browser/a881514c-5d1f-4037-ad35-17d49f0810de
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674239879687	Marionette	INFO	Stopped listening on port 42959
+1674240035794	geckodriver	INFO	Listening on 127.0.0.1:41881
+1674240035821	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "59163" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile3b1y1o"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674240036157	Marionette	INFO	Marionette enabled
+1674240036159	Marionette	INFO	Listening on port 39341
+WebDriver BiDi listening on ws://127.0.0.1:59163
+Read port: 39341
+1674240036316	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile3b1y1o/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59163/devtools/browser/eab20f4b-f6f1-4dcb-8ba9-c89842865b21
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674240038799	Marionette	INFO	Stopped listening on port 39341
+1674240184314	geckodriver	INFO	Listening on 127.0.0.1:39267
+1674240184341	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "58699" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile8BVaFR"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674240184719	Marionette	INFO	Marionette enabled
+1674240184721	Marionette	INFO	Listening on port 37177
+Read port: 37177
+WebDriver BiDi listening on ws://127.0.0.1:58699
+1674240184797	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile8BVaFR/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58699/devtools/browser/5824cebc-32eb-4f99-a4de-71bc1a38e8a9
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674240187370	Marionette	INFO	Stopped listening on port 37177
+1674240210734	geckodriver	INFO	Listening on 127.0.0.1:40321
+1674240210762	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "50247" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileJq27oH"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674240211121	Marionette	INFO	Marionette enabled
+1674240211123	Marionette	INFO	Listening on port 38511
+Read port: 38511
+WebDriver BiDi listening on ws://127.0.0.1:50247
+1674240211192	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileJq27oH/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50247/devtools/browser/56ae1284-0323-433a-a222-dbbd27075e57
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674240213864	Marionette	INFO	Stopped listening on port 38511
+1674240318821	geckodriver	INFO	Listening on 127.0.0.1:39821
+1674240318847	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "45597" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileLovxUe"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674240319187	Marionette	INFO	Marionette enabled
+1674240319189	Marionette	INFO	Listening on port 34695
+WebDriver BiDi listening on ws://127.0.0.1:45597
+Read port: 34695
+1674240319348	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileLovxUe/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:45597/devtools/browser/2888ac4f-175f-4117-9075-1396e0cb14e5
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674240321877	Marionette	INFO	Stopped listening on port 34695
+1674240535355	geckodriver	INFO	Listening on 127.0.0.1:32811
+1674240535398	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "44781" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilejgRrq9"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674240535795	Marionette	INFO	Marionette enabled
+1674240535797	Marionette	INFO	Listening on port 33411
+Read port: 33411
+WebDriver BiDi listening on ws://127.0.0.1:44781
+1674240535867	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilejgRrq9/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:44781/devtools/browser/d3410429-6d90-487d-967d-6a410a16cfd3
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674240538421	Marionette	INFO	Stopped listening on port 33411
+1674240621735	geckodriver	INFO	Listening on 127.0.0.1:55543
+1674240621765	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "53531" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile7vbems"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674240622106	Marionette	INFO	Marionette enabled
+1674240622108	Marionette	INFO	Listening on port 40377
+WebDriver BiDi listening on ws://127.0.0.1:53531
+Read port: 40377
+1674240622264	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile7vbems/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53531/devtools/browser/be28878d-4b96-4db0-aa91-cc6c1f37cd17
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674240624899	Marionette	INFO	Stopped listening on port 40377
+1674240649858	geckodriver	INFO	Listening on 127.0.0.1:51761
+1674240649886	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "32953" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile2EVjcS"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674240650243	Marionette	INFO	Marionette enabled
+1674240650246	Marionette	INFO	Listening on port 33179
+Read port: 33179
+WebDriver BiDi listening on ws://127.0.0.1:32953
+1674240650319	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile2EVjcS/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:32953/devtools/browser/fdb22647-4fdc-426d-ae74-320cf6d1b8be
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674240652768	Marionette	INFO	Stopped listening on port 33179
+1674240682394	geckodriver	INFO	Listening on 127.0.0.1:59965
+1674240682421	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "48149" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileU36x7M"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674240682763	Marionette	INFO	Marionette enabled
+1674240682765	Marionette	INFO	Listening on port 33511
+WebDriver BiDi listening on ws://127.0.0.1:48149
+Read port: 33511
+1674240682909	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileU36x7M/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:48149/devtools/browser/625ec3a4-6a29-404d-9707-ab200ba6ba87
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674240685439	Marionette	INFO	Stopped listening on port 33511
+1674241152181	geckodriver	INFO	Listening on 127.0.0.1:58717
+1674241152208	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "50927" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilenUdHkQ"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674241152558	Marionette	INFO	Marionette enabled
+1674241152560	Marionette	INFO	Listening on port 33307
+WebDriver BiDi listening on ws://127.0.0.1:50927
+Read port: 33307
+1674241152641	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilenUdHkQ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50927/devtools/browser/08a5f879-ff95-49c5-b40a-30578c0b926b
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674241155227	Marionette	INFO	Stopped listening on port 33307
+1674241179755	geckodriver	INFO	Listening on 127.0.0.1:59131
+1674241179784	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "47577" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileGqEceG"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674241180139	Marionette	INFO	Marionette enabled
+1674241180141	Marionette	INFO	Listening on port 37297
+Read port: 37297
+WebDriver BiDi listening on ws://127.0.0.1:47577
+1674241180220	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileGqEceG/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:47577/devtools/browser/fb0aef32-93ef-4a13-95ad-0c9cf2e9c7f5
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674241182646	Marionette	INFO	Stopped listening on port 37297
+1674241289464	geckodriver	INFO	Listening on 127.0.0.1:49681
+1674241289494	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "34827" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiletEMp4G"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674241289844	Marionette	INFO	Marionette enabled
+1674241289847	Marionette	INFO	Listening on port 33955
+WebDriver BiDi listening on ws://127.0.0.1:34827
+Read port: 33955
+1674241289926	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiletEMp4G/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:34827/devtools/browser/82372583-83dc-4770-8e72-e14d98ccac88
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674241292625	Marionette	INFO	Stopped listening on port 33955
+1674241659791	geckodriver	INFO	Listening on 127.0.0.1:44419
+1674241659820	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "33085" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileVErQyU"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674241660170	Marionette	INFO	Marionette enabled
+1674241660173	Marionette	INFO	Listening on port 36707
+WebDriver BiDi listening on ws://127.0.0.1:33085
+Read port: 36707
+1674241660307	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileVErQyU/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:33085/devtools/browser/5eb0c044-a88c-485f-ba8f-8d7c1cb5a4ce
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674241662913	Marionette	INFO	Stopped listening on port 36707
+1674241752424	geckodriver	INFO	Listening on 127.0.0.1:49195
+1674241752451	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "52451" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileC0X7aX"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674241752793	Marionette	INFO	Marionette enabled
+1674241752796	Marionette	INFO	Listening on port 46857
+WebDriver BiDi listening on ws://127.0.0.1:52451
+Read port: 46857
+1674241752974	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileC0X7aX/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52451/devtools/browser/f5ec897a-1e51-425e-92b2-bc292f623f04
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674241755448	Marionette	INFO	Stopped listening on port 46857
+1674241878335	geckodriver	INFO	Listening on 127.0.0.1:48145
+1674241878362	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "60439" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilepRswEE"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674241878696	Marionette	INFO	Marionette enabled
+1674241878698	Marionette	INFO	Listening on port 33277
+WebDriver BiDi listening on ws://127.0.0.1:60439
+Read port: 33277
+1674241878856	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilepRswEE/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60439/devtools/browser/8f28c2f6-9dbd-48fe-a2d5-03d7e3de1283
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674241881370	Marionette	INFO	Stopped listening on port 33277
+1674241916517	geckodriver	INFO	Listening on 127.0.0.1:36145
+1674241916544	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "33333" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileNCJqlU"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674241916893	Marionette	INFO	Marionette enabled
+1674241916896	Marionette	INFO	Listening on port 40587
+WebDriver BiDi listening on ws://127.0.0.1:33333
+Read port: 40587
+1674241917031	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileNCJqlU/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:33333/devtools/browser/0293bdf2-a1b6-4d0d-8ea3-c5860b26ee58
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674241930213	Marionette	INFO	Stopped listening on port 40587
+1674241982117	geckodriver	INFO	Listening on 127.0.0.1:38503
+1674241982144	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "39047" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilewGqCcn"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674241982485	Marionette	INFO	Marionette enabled
+1674241982487	Marionette	INFO	Listening on port 32799
+WebDriver BiDi listening on ws://127.0.0.1:39047
+Read port: 32799
+1674241982627	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilewGqCcn/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:39047/devtools/browser/50a3e43a-1408-4eea-b9c6-fdb42db11bfb
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674241987431	Marionette	INFO	Stopped listening on port 32799
+1674242018284	geckodriver	INFO	Listening on 127.0.0.1:55103
+1674242018311	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "43201" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilevc4Saf"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674242018643	Marionette	INFO	Marionette enabled
+1674242018647	Marionette	INFO	Listening on port 46801
+Read port: 46801
+WebDriver BiDi listening on ws://127.0.0.1:43201
+1674242018793	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilevc4Saf/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:43201/devtools/browser/ec51c89a-8475-4d29-bba6-560d74c68057
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674242023812	Marionette	INFO	Stopped listening on port 46801
+1674242044121	geckodriver	INFO	Listening on 127.0.0.1:55139
+1674242044148	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "56173" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileQAnRSg"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674242044488	Marionette	INFO	Marionette enabled
+1674242044491	Marionette	INFO	Listening on port 34355
+WebDriver BiDi listening on ws://127.0.0.1:56173
+Read port: 34355
+1674242044644	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileQAnRSg/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56173/devtools/browser/c671607c-aace-4892-bede-8aa7231a9d2b
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674242049495	Marionette	INFO	Stopped listening on port 34355
+1674242101291	geckodriver	INFO	Listening on 127.0.0.1:56363
+1674242101318	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "44601" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileAUX7FD"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674242101664	Marionette	INFO	Marionette enabled
+1674242101667	Marionette	INFO	Listening on port 38385
+WebDriver BiDi listening on ws://127.0.0.1:44601
+Read port: 38385
+1674242101804	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileAUX7FD/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:44601/devtools/browser/aac73b23-05cd-4e3d-bc8c-d8a4adc672fd
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674242107390	Marionette	INFO	Stopped listening on port 38385
+1674242144007	geckodriver	INFO	Listening on 127.0.0.1:38171
+1674242144035	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "41305" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileVALpzL"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674242144394	Marionette	INFO	Marionette enabled
+1674242144396	Marionette	INFO	Listening on port 41413
+Read port: 41413
+WebDriver BiDi listening on ws://127.0.0.1:41305
+1674242144466	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileVALpzL/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:41305/devtools/browser/bc9d444e-8561-4b10-8cf9-9a430f5a29e7
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674242150278	Marionette	INFO	Stopped listening on port 41413
+1674242241039	geckodriver	INFO	Listening on 127.0.0.1:60883
+1674242241070	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "46353" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilezXnt1R"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674242241406	Marionette	INFO	Marionette enabled
+1674242241408	Marionette	INFO	Listening on port 41649
+WebDriver BiDi listening on ws://127.0.0.1:46353
+Read port: 41649
+1674242241570	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilezXnt1R/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:46353/devtools/browser/9661ab5f-e6c6-4da0-ae99-e3c099062f12
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674242246237	Marionette	INFO	Stopped listening on port 41649
+1674242473481	geckodriver	INFO	Listening on 127.0.0.1:46719
+1674242473507	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "60843" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile6XtqPF"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674242473892	Marionette	INFO	Marionette enabled
+1674242473894	Marionette	INFO	Listening on port 43579
+Read port: 43579
+WebDriver BiDi listening on ws://127.0.0.1:60843
+1674242473993	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile6XtqPF/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60843/devtools/browser/aee8dbf6-7b13-4fb1-86d3-62810d71525d
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674242541050	Marionette	INFO	Stopped listening on port 43579
+Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
+1674244113604	geckodriver	INFO	Listening on 127.0.0.1:51791
+1674244114225	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "54227" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileHFJVR8"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674244115028	Marionette	INFO	Marionette enabled
+1674244115031	Marionette	INFO	Listening on port 42313
+Read port: 42313
+WebDriver BiDi listening on ws://127.0.0.1:54227
+1674244115210	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileHFJVR8/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54227/devtools/browser/98977487-eeb1-44b6-b7cc-17f843575855
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674244121672	Marionette	INFO	Stopped listening on port 42313
+1674245426020	geckodriver	INFO	Listening on 127.0.0.1:38765
+1674245426048	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "44325" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile4u1fJy"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674245426404	Marionette	INFO	Marionette enabled
+1674245426407	Marionette	INFO	Listening on port 35331
+Read port: 35331
+WebDriver BiDi listening on ws://127.0.0.1:44325
+1674245426479	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile4u1fJy/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:44325/devtools/browser/a15b8155-9fa0-4b86-88fc-f9e3f8be70b9
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674245431850	Marionette	INFO	Stopped listening on port 35331
+1674245551523	geckodriver	INFO	Listening on 127.0.0.1:59653
+1674245551551	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "45937" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilehgWk40"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674245551885	Marionette	INFO	Marionette enabled
+1674245551887	Marionette	INFO	Listening on port 37257
+WebDriver BiDi listening on ws://127.0.0.1:45937
+Read port: 37257
+1674245552070	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilehgWk40/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:45937/devtools/browser/3ca70ebf-21a9-4e48-8ea4-953554214397
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674245556984	Marionette	INFO	Stopped listening on port 37257
+1674245610430	geckodriver	INFO	Listening on 127.0.0.1:53753
+1674245610457	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "56451" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilexX2ENN"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674245610792	Marionette	INFO	Marionette enabled
+1674245610794	Marionette	INFO	Listening on port 33427
+WebDriver BiDi listening on ws://127.0.0.1:56451
+Read port: 33427
+1674245610952	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilexX2ENN/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56451/devtools/browser/6d2f4f97-7b0f-460a-9200-ec02931a4962
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674245617924	Marionette	INFO	Stopped listening on port 33427
+1674245840067	geckodriver	INFO	Listening on 127.0.0.1:44069
+1674245840103	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "37823" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileAELWEm"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674245840446	Marionette	INFO	Marionette enabled
+1674245840449	Marionette	INFO	Listening on port 42599
+WebDriver BiDi listening on ws://127.0.0.1:37823
+Read port: 42599
+1674245840589	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileAELWEm/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:37823/devtools/browser/65afd7df-9a0c-4ffc-9688-867c77f675f2
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674245852115	Marionette	INFO	Stopped listening on port 42599
+1674245870033	geckodriver	INFO	Listening on 127.0.0.1:52019
+1674245870060	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "60269" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilebVaI9V"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674245870407	Marionette	INFO	Marionette enabled
+1674245870411	Marionette	INFO	Listening on port 41455
+Read port: 41455
+WebDriver BiDi listening on ws://127.0.0.1:60269
+1674245870522	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilebVaI9V/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60269/devtools/browser/568e4ca8-e1f3-41dd-8a29-e09c4eab6175
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674245874586	Marionette	INFO	Stopped listening on port 41455
+1674246016778	geckodriver	INFO	Listening on 127.0.0.1:35427
+1674246016807	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "52409" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilegkRuYL"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674246017157	Marionette	INFO	Marionette enabled
+1674246017160	Marionette	INFO	Listening on port 41399
+Read port: 41399
+WebDriver BiDi listening on ws://127.0.0.1:52409
+1674246017241	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilegkRuYL/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52409/devtools/browser/9f9b5979-a6a8-4b68-b3d5-444c15605679
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674246024039	Marionette	INFO	Stopped listening on port 41399
+1674246103703	geckodriver	INFO	Listening on 127.0.0.1:34037
+1674246103731	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "36029" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilemcM6So"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674246104082	Marionette	INFO	Marionette enabled
+1674246104084	Marionette	INFO	Listening on port 37795
+Read port: 37795
+WebDriver BiDi listening on ws://127.0.0.1:36029
+1674246104170	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilemcM6So/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:36029/devtools/browser/4df2d87c-abc4-4bb2-9b76-60164a7bcb84
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674246109752	Marionette	INFO	Stopped listening on port 37795
+1674246140817	geckodriver	INFO	Listening on 127.0.0.1:56683
+1674246140845	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "59355" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileuRYi8g"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674246141191	Marionette	INFO	Marionette enabled
+1674246141195	Marionette	INFO	Listening on port 46035
+Read port: 46035
+WebDriver BiDi listening on ws://127.0.0.1:59355
+1674246141300	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileuRYi8g/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59355/devtools/browser/5af06418-9709-46d4-9178-44255e32df73
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674246146029	Marionette	INFO	Stopped listening on port 46035
+1674246944027	geckodriver	INFO	Listening on 127.0.0.1:46981
+1674246944600	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "44465" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiletXWI1N"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674246945103	Marionette	INFO	Marionette enabled
+1674246945106	Marionette	INFO	Listening on port 32923
+WebDriver BiDi listening on ws://127.0.0.1:44465
+Read port: 32923
+1674246945308	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiletXWI1N/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:44465/devtools/browser/26af1b97-fa94-48b4-ad54-e90e2a202690
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674246947860	Marionette	INFO	Stopped listening on port 32923
+1674246958966	geckodriver	INFO	Listening on 127.0.0.1:52205
+1674246959522	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "47159" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilee2eJeC"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674246959879	Marionette	INFO	Marionette enabled
+1674246959881	Marionette	INFO	Listening on port 34457
+Read port: 34457
+WebDriver BiDi listening on ws://127.0.0.1:47159
+1674246959957	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilee2eJeC/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:47159/devtools/browser/d2c97fca-3334-4b7a-9d84-c65cdcd453a4
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674246962553	Marionette	INFO	Stopped listening on port 34457
+1674247066637	geckodriver	INFO	Listening on 127.0.0.1:55855
+1674247066665	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "50687" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileM8xpXg"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674247067078	Marionette	INFO	Marionette enabled
+1674247067081	Marionette	INFO	Listening on port 36101
+WebDriver BiDi listening on ws://127.0.0.1:50687
+Read port: 36101
+1674247067277	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileM8xpXg/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50687/devtools/browser/b54f3c83-7d00-4afe-9e89-35b4ef32d882
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674247070130	Marionette	INFO	Stopped listening on port 36101
+1674247200913	geckodriver	INFO	Listening on 127.0.0.1:60673
+1674247200940	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "51293" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileNXFGRC"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674247201447	Marionette	INFO	Marionette enabled
+1674247201451	Marionette	INFO	Listening on port 38389
+WebDriver BiDi listening on ws://127.0.0.1:51293
+Read port: 38389
+1674247201650	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileNXFGRC/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51293/devtools/browser/24a503f5-a10b-4364-9498-01a2805f0f34
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674247205424	Marionette	INFO	Stopped listening on port 38389
+1674247218193	geckodriver	INFO	Listening on 127.0.0.1:41965
+1674247218720	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "36765" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileM4a8B9"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674247219191	Marionette	INFO	Marionette enabled
+1674247219195	Marionette	INFO	Listening on port 37691
+Read port: 37691
+WebDriver BiDi listening on ws://127.0.0.1:36765
+1674247219280	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileM4a8B9/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:36765/devtools/browser/a8593880-9ee1-4420-81a1-a04f0a15c4a0
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674247222143	Marionette	INFO	Stopped listening on port 37691
+1674247247969	geckodriver	INFO	Listening on 127.0.0.1:34247
+1674247247996	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "52805" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileZA028j"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674247248409	Marionette	INFO	Marionette enabled
+1674247248414	Marionette	INFO	Listening on port 41795
+WebDriver BiDi listening on ws://127.0.0.1:52805
+Read port: 41795
+1674247248601	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileZA028j/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52805/devtools/browser/64083ebb-c5c1-4065-bdb0-6f99b0a89907
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674247251239	Marionette	INFO	Stopped listening on port 41795
+1674247368123	geckodriver	INFO	Listening on 127.0.0.1:56941
+1674247368654	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "57069" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileLEWqcP"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674247369096	Marionette	INFO	Marionette enabled
+1674247369099	Marionette	INFO	Listening on port 42417
+Read port: 42417
+WebDriver BiDi listening on ws://127.0.0.1:57069
+1674247369216	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileLEWqcP/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57069/devtools/browser/cb768ae3-bc21-4a18-99a4-5e355a23f47b
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674247372272	Marionette	INFO	Stopped listening on port 42417
+1674247407783	geckodriver	INFO	Listening on 127.0.0.1:45079
+1674247408341	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "41765" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilePFbZSb"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674247408791	Marionette	INFO	Marionette enabled
+1674247408794	Marionette	INFO	Listening on port 45465
+Read port: 45465
+WebDriver BiDi listening on ws://127.0.0.1:41765
+1674247408880	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilePFbZSb/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:41765/devtools/browser/a757a256-77d5-4ca8-9872-de60bf166dbd
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674247411728	Marionette	INFO	Stopped listening on port 45465
+1674247418981	geckodriver	INFO	Listening on 127.0.0.1:47493
+1674247419021	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "41349" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileveGzRF"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674247419422	Marionette	INFO	Marionette enabled
+1674247419424	Marionette	INFO	Listening on port 40389
+WebDriver BiDi listening on ws://127.0.0.1:41349
+Read port: 40389
+1674247419607	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileveGzRF/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:41349/devtools/browser/f730020a-4f79-44f8-b691-e43c34744c2d
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674247422201	Marionette	INFO	Stopped listening on port 40389
+1674247466559	geckodriver	INFO	Listening on 127.0.0.1:39253
+1674247466587	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "55627" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileuCMZwP"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674247466961	Marionette	INFO	Marionette enabled
+1674247466968	Marionette	INFO	Listening on port 33759
+Read port: 33759
+WebDriver BiDi listening on ws://127.0.0.1:55627
+1674247467048	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileuCMZwP/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55627/devtools/browser/e319e53b-ba11-404b-915f-5a87a8b57c33
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674247469875	Marionette	INFO	Stopped listening on port 33759
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 693: TypeError: this.tablesData[table] is undefined
+1674248038447	geckodriver	INFO	Listening on 127.0.0.1:53849
+1674248038998	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "52885" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile9f76GU"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674248039568	Marionette	INFO	Marionette enabled
+1674248039573	Marionette	INFO	Listening on port 44763
+Read port: 44763
+WebDriver BiDi listening on ws://127.0.0.1:52885
+1674248039697	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile9f76GU/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52885/devtools/browser/c9dd104c-900d-44ce-b37b-e504970b40a0
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674248042675	Marionette	INFO	Stopped listening on port 44763
+JavaScript error: resource:///modules/FaviconLoader.jsm, line 591: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+1674248229374	geckodriver	INFO	Listening on 127.0.0.1:43779
+1674248229938	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "45033" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileYeaQT5"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674248230385	Marionette	INFO	Marionette enabled
+1674248230388	Marionette	INFO	Listening on port 34383
+Read port: 34383
+WebDriver BiDi listening on ws://127.0.0.1:45033
+1674248230481	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileYeaQT5/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:45033/devtools/browser/9dd520cd-a7cc-4eaf-8549-da400109b2a0
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674248238592	Marionette	INFO	Stopped listening on port 34383
+1674248313990	geckodriver	INFO	Listening on 127.0.0.1:57145
+1674248314018	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "60137" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileBaNF9g"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674248314348	Marionette	INFO	Marionette enabled
+1674248314351	Marionette	INFO	Listening on port 38521
+WebDriver BiDi listening on ws://127.0.0.1:60137
+Read port: 38521
+1674248314512	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileBaNF9g/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60137/devtools/browser/67579e60-f16f-490d-86c8-af29be4116f2
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674248316902	Marionette	INFO	Stopped listening on port 38521
+1674249317827	geckodriver	INFO	Listening on 127.0.0.1:33429
+1674249317855	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "60855" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileKwVGGF"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674249318202	Marionette	INFO	Marionette enabled
+1674249318205	Marionette	INFO	Listening on port 40517
+Read port: 40517
+WebDriver BiDi listening on ws://127.0.0.1:60855
+1674249318292	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileKwVGGF/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60855/devtools/browser/2705c150-2801-4d1e-a8e4-ec731c948190
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674249320757	Marionette	INFO	Stopped listening on port 40517
+1674249809163	geckodriver	INFO	Listening on 127.0.0.1:52671
+1674249809193	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "60941" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileSwah4e"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674249809591	Marionette	INFO	Marionette enabled
+1674249809594	Marionette	INFO	Listening on port 45917
+WebDriver BiDi listening on ws://127.0.0.1:60941
+Read port: 45917
+1674249809765	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileSwah4e/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60941/devtools/browser/302b0f72-6320-4f13-82a1-ab079a6fd77e
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674249813297	Marionette	INFO	Stopped listening on port 45917
+1674249957351	geckodriver	INFO	Listening on 127.0.0.1:36615
+1674249957383	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "40557" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileCyfSIc"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674249957824	Marionette	INFO	Marionette enabled
+1674249957826	Marionette	INFO	Listening on port 35071
+Read port: 35071
+WebDriver BiDi listening on ws://127.0.0.1:40557
+1674249957924	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileCyfSIc/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:40557/devtools/browser/69eb5a61-41a8-42d6-ad64-ba3053ef1b39
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674249960551	Marionette	INFO	Stopped listening on port 35071
+1674250122956	geckodriver	INFO	Listening on 127.0.0.1:43537
+1674250122985	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "37775" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilet9j4hM"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674250123372	Marionette	INFO	Marionette enabled
+1674250123374	Marionette	INFO	Listening on port 43047
+Read port: 43047
+WebDriver BiDi listening on ws://127.0.0.1:37775
+1674250123474	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilet9j4hM/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:37775/devtools/browser/630311c5-7d06-4087-ae35-aac346722317
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674250126268	Marionette	INFO	Stopped listening on port 43047
+1674250381763	geckodriver	INFO	Listening on 127.0.0.1:36911
+1674250381792	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "54359" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilewKQgJq"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674250382168	Marionette	INFO	Marionette enabled
+1674250382172	Marionette	INFO	Listening on port 46415
+Read port: 46415
+WebDriver BiDi listening on ws://127.0.0.1:54359
+1674250382292	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilewKQgJq/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54359/devtools/browser/6a80e8f6-2c18-4944-a6e3-29ad7e3eb322
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674250384959	Marionette	INFO	Stopped listening on port 46415
+1674250624677	geckodriver	INFO	Listening on 127.0.0.1:45629
+1674250624704	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "40173" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile4zgNEe"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674250625148	Marionette	INFO	Marionette enabled
+1674250625150	Marionette	INFO	Listening on port 39773
+WebDriver BiDi listening on ws://127.0.0.1:40173
+Read port: 39773
+1674250625305	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile4zgNEe/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:40173/devtools/browser/c9f0f000-120a-414a-997d-ef7c14c64086
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674250627810	Marionette	INFO	Stopped listening on port 39773
+1674250638300	geckodriver	INFO	Listening on 127.0.0.1:36623
+1674250638331	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "36649" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileZfbaYH"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674250638757	Marionette	INFO	Marionette enabled
+1674250638760	Marionette	INFO	Listening on port 46353
+WebDriver BiDi listening on ws://127.0.0.1:36649
+Read port: 46353
+1674250638926	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileZfbaYH/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:36649/devtools/browser/abb328bf-ba34-46d2-ae84-5c56f0630cff
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674250641232	Marionette	INFO	Stopped listening on port 46353
+1674250744146	geckodriver	INFO	Listening on 127.0.0.1:35125
+1674250744174	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "43517" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileG6sR8C"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674250744515	Marionette	INFO	Marionette enabled
+1674250744517	Marionette	INFO	Listening on port 36615
+WebDriver BiDi listening on ws://127.0.0.1:43517
+Read port: 36615
+1674250744659	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileG6sR8C/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:43517/devtools/browser/88377637-3cd1-4af4-a483-4708a54d131d
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674250746985	Marionette	INFO	Stopped listening on port 36615
+1674250751553	geckodriver	INFO	Listening on 127.0.0.1:55447
+1674250751580	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "39325" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile5d2xFZ"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674250751924	Marionette	INFO	Marionette enabled
+1674250751927	Marionette	INFO	Listening on port 38771
+WebDriver BiDi listening on ws://127.0.0.1:39325
+Read port: 38771
+1674250752067	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile5d2xFZ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:39325/devtools/browser/507c8097-6cdc-4bc7-b0b8-dc2d2ac2af9e
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674250754479	Marionette	INFO	Stopped listening on port 38771
+1674250758473	geckodriver	INFO	Listening on 127.0.0.1:40245
+1674250758500	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "34469" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile16YTR9"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674250758840	Marionette	INFO	Marionette enabled
+1674250758843	Marionette	INFO	Listening on port 44403
+WebDriver BiDi listening on ws://127.0.0.1:34469
+Read port: 44403
+1674250759001	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile16YTR9/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:34469/devtools/browser/6a3f1d42-5afe-4ccf-b416-b436f9bbb930
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674250761368	Marionette	INFO	Stopped listening on port 44403
+1674250764376	geckodriver	INFO	Listening on 127.0.0.1:33445
+1674250764940	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "57641" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilepovBf6"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674250765286	Marionette	INFO	Marionette enabled
+1674250765289	Marionette	INFO	Listening on port 35981
+WebDriver BiDi listening on ws://127.0.0.1:57641
+Read port: 35981
+1674250765373	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilepovBf6/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:57641/devtools/browser/e9697875-5979-4e6c-adc2-883fb8210615
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674250767801	Marionette	INFO	Stopped listening on port 35981
+1674250779993	geckodriver	INFO	Listening on 127.0.0.1:58591
+1674250780020	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "37225" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileSDGZw4"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674250780373	Marionette	INFO	Marionette enabled
+1674250780376	Marionette	INFO	Listening on port 44369
+Read port: 44369
+WebDriver BiDi listening on ws://127.0.0.1:37225
+1674250780457	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileSDGZw4/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:37225/devtools/browser/ded5d71b-f8b2-41d7-ac74-e7bf0df07321
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674250782844	Marionette	INFO	Stopped listening on port 44369
+1674250849100	geckodriver	INFO	Listening on 127.0.0.1:41819
+1674250849665	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "41737" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileWaRi4r"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674250850010	Marionette	INFO	Marionette enabled
+1674250850012	Marionette	INFO	Listening on port 36277
+WebDriver BiDi listening on ws://127.0.0.1:41737
+Read port: 36277
+1674250850155	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileWaRi4r/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:41737/devtools/browser/c3e942d6-c7ba-4cc6-8b64-0d58c7673ba8
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674250852837	Marionette	INFO	Stopped listening on port 36277
+1674250932569	geckodriver	INFO	Listening on 127.0.0.1:36477
+1674250932595	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "45197" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileY65KSj"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674250932936	Marionette	INFO	Marionette enabled
+1674250932939	Marionette	INFO	Listening on port 45143
+WebDriver BiDi listening on ws://127.0.0.1:45197
+Read port: 45143
+1674250933086	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileY65KSj/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:45197/devtools/browser/61ddffbe-5b00-498b-b9d1-8c470fdfbab3
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674250935436	Marionette	INFO	Stopped listening on port 45143
+1674250967230	geckodriver	INFO	Listening on 127.0.0.1:57777
+1674250967261	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "52499" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile0wgl58"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674250967620	Marionette	INFO	Marionette enabled
+1674250967623	Marionette	INFO	Listening on port 33351
+Read port: 33351
+WebDriver BiDi listening on ws://127.0.0.1:52499
+1674250967692	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile0wgl58/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52499/devtools/browser/a835b7f9-1d39-4ebc-85f6-8c292419f4c5
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674250970189	Marionette	INFO	Stopped listening on port 33351
+>>>>>>> hookah_request
+1674252651997	geckodriver	INFO	Listening on 127.0.0.1:38177
+1674252652031	mozrunner::runner	INFO	Running command: "/sbin/firefox" "--marionette" "--remote-debugging-port" "47369" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilealOw5f"
+[GFX1-]: glxtest: VA-API test failed: failed to initialise VAAPI connection.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1674252652440	Marionette	INFO	Marionette enabled
+1674252652444	Marionette	INFO	Listening on port 38411
+WebDriver BiDi listening on ws://127.0.0.1:47369
+Read port: 38411
+1674252652650	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilealOw5f/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:47369/devtools/browser/e9df210a-42e4-4c2f-9b2e-fe3ddb42b16b
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://korolev.hookah.work."
+1674252655663	Marionette	INFO	Stopped listening on port 38411
