@@ -36,7 +36,12 @@ driver.quit()
 for cookie in cookies:
     session.cookies.update({cookie['name']: cookie['value']})
 
-response = session.get("https://korolev.hookah.work/sale/data?iDisplayStart=0&iDisplayLength=6500&mDataProp_12=created_at&bSortable_12=true&iSortCol_0=12&sSortDir_0=desc&iSortingCols=1")
+import requests
+session = requests.Session()
+
+params = {'iDisplayStart': 0, 'iDisplayLength': 6500, 'mDataProp_12': 'created_at', 'bSortable_12': 'true', 'iSortCol_0': 12, 'sSortDir_0': 'desc', 'iSortingCols': 1}
+response = session.get("https://korolev.hookah.work/sale/data", params=params)
+
 response = session.get("https://korolev.hookah.work/sale/data?iDisplayStart=0&iDisplayLength=6500&mDataProp_12=created_at&bSortable_12=true&iSortCol_0=12&sSortDir_0=desc&iSortingCols=1")
 response = session.get("https://korolev.hookah.work/sale/data?iDisplayStart=0&iDisplayLength=6500&mDataProp_12=created_at&bSortable_12=true&iSortCol_0=12&sSortDir_0=desc&iSortingCols=1")
 response = session.get("https://korolev.hookah.work/sale/data?iDisplayStart=0&iDisplayLength=6500&mDataProp_12=created_at&bSortable_12=true&iSortCol_0=12&sSortDir_0=desc&iSortingCols=1")

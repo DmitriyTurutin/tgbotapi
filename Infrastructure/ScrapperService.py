@@ -2,7 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from bs4 import BeautifulSoup
+import json
+import requests
 from datetime import datetime
 import locale
 import re
@@ -41,24 +42,7 @@ class Scrapper:
         submit = self.driver.find_element(By.CLASS_NAME, 'btn-primary')
         submit.click()
 
-        # Wait for the "Продажи" link to be present 
-        sales = WebDriverWait(self.driver, 10).until(
-            EC.presence_of_element_located((By.LINK_TEXT, 'Продажи'))
-        )
-        sales.click()
-
-
-        # Wait for the page to be fully loaded
-        WebDriverWait(self.driver, 10).until(EC.title_is(self.driver.title))
-        list = WebDriverWait(self.driver, 10).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, 'select.form-control'))
-        )
-
-        list.click()
-        option = self.driver.find_element(By.XPATH, ".//option[text()='100']")
-
-        option.click()
-
+        
         self.html.append(self.driver.page_source)
 
         # self.driver.quit()
