@@ -31,11 +31,12 @@ async def update(request: UpdateRequest):
                    email=request.email, password=request.password)
     return {"response": "success"}
 
+
 @router.get("/scan")
 async def scan(request: UpdateRequest):
     scrapper = WebScrapperService()
     scrapper.scan(url=request.url,
-                   email=request.email, password=request.password)
+                  email=request.email, password=request.password)
     return {"response": "success"}
 
 
@@ -68,9 +69,9 @@ async def download_file(file_name: str):
     else:
         return HTTPException(status_code=404, detail="File not found")
 
+
 @router.get("/predict")
 async def predict(unique_visitors: int):
-
     loaded_model = pickle.load(open('./Storage/linear_regression_model.pkl', 'rb'))
 
     today = datetime.now()
@@ -78,7 +79,7 @@ async def predict(unique_visitors: int):
 
     tomorrow = today + one_day
 
-    month = tomorrow.month  
+    month = tomorrow.month
     week_day = tomorrow.weekday()
     next_day_features = [[week_day, month, unique_visitors]]
     result = loaded_model.predict(next_day_features)

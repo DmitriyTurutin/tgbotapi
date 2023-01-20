@@ -47,8 +47,8 @@ class Scrapper:
                   'iSortCol_0': 12, 'sSortDir_0': 'desc', 'iSortingCols': 1}
         response = session.get("https://korolev.hookah.work/sale/data", params=params)
         list_of_data.append(response.json()['data'])
-        self.clean_data_new(list_of_data)
-        return self.data
+        return_data = self.clean_data_new(list_of_data)
+        return return_data
 
     def scan(self) -> list:
         self.driver.get("https://korolev.hookah.work/")
@@ -90,12 +90,13 @@ class Scrapper:
         response = session.get("https://korolev.hookah.work/sale/data", params=params)
         list_of_data.append(response.json()['data'])
 
-        self.clean_data_new(list_of_data)
+        return_data = self.clean_data_new(list_of_data)
 
-        return self.data
+        return return_data
 
     def clean_data_new(self, list_of_data: list):
         locale.setlocale(locale.LC_TIME, 'ru_RU.UTF-8')
+        data: list[Sale] = []
         for data_item in list_of_data:
             for sale_item in data_item:
                 sale = Sale()
@@ -105,7 +106,8 @@ class Scrapper:
                 sale.payment_method = sale_item['payment_method_id'].strip()
                 sale.client = sale_item['client_id'].strip()
                 sale.time_added = self.convert_to_datetime(sale_item['created_at'].strip())
-                self.data.append(sale)
+                data.append(sale)
+        return data
 
     def convert_to_datetime(self, string: str) -> datetime:
         string = self.match_datetime(string)
