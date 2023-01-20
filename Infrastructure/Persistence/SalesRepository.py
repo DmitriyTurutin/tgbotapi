@@ -1,6 +1,7 @@
 import psycopg2
 import os
 from environs import Env
+from Entities.Sale import Sale
 from dotenv import load_dotenv
 from datetime import datetime, timedelta
 
@@ -8,15 +9,22 @@ load_dotenv()
 
 env = Env()
 
+
 class SalesRepository:
     conn = None
     cur = None
 
-    host = os.environ['HOST']
-    port = env.int('PORT') 
-    user = os.environ['USER'] 
-    password = os.environ['PASSWORD'] 
-    database = os.environ['DATABASE'] 
+    # host = os.environ['HOST']
+    # port = env.int('PORT')
+    # user = os.environ['USER']
+    # password = os.environ['PASSWORD']
+    # database = os.environ['DATABASE']
+
+    host = 'localhost'
+    port = 5432
+    user = 'myuser'
+    password = 'mypass'
+    database = 'mydb'
 
     def __init__(self):
         # Connect to the database and create table if not exists
@@ -43,12 +51,7 @@ class SalesRepository:
         self.conn.commit()
 
     def add(self,
-            title: str,
-            price: float,
-            amount: int,
-            payment_method: str,
-            client: str,
-            time_added: datetime):
+            sale: Sale):
         insert_statement = """
         INSERT INTO sales (title, price, amount, payment_method, client, time_added)
         VALUES (%s, %s, %s, %s, %s, %s)
@@ -56,12 +59,12 @@ class SalesRepository:
 
         try:
             self.cur.execute(insert_statement, (
-                title,
-                price,
-                amount,
-                payment_method,
-                client,
-                time_added
+                sale.title,
+                sale.price,
+                sale.amount,
+                sale.payment_method,
+                sale.client,
+                sale.time_added
             ))
 
             self.conn.commit()

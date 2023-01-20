@@ -4,85 +4,15 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 from datetime import datetime
+from Entities.Sale import Sale
 import requests
+import time
 import locale
 import re
-# From test request
-##############################################
-##############################################
-##############################################
-##############################################
-# from selenium import webdriver
-# import time
-# import json
-# from selenium.webdriver.common.by import By
-# from selenium.webdriver.support.ui import WebDriverWait
-# from selenium.webdriver.support import expected_conditions as EC
-# import requests
 
-# driver = webdriver.Firefox()
-
-# email = "aleksandrdonskov@gmail.com" 
-# password = "hpkorolev2020"
-
-# driver.get("https://korolev.hookah.work/")
-# email_input = WebDriverWait(driver, 10).until(
-#     EC.presence_of_element_located((By.ID, 'loginform-email'))
-# )
-# password_input = driver.find_element(By.ID, 'loginform-password')
-# email_input.send_keys(email)
-# password_input.send_keys(password)
-
-# submit = driver.find_element(By.CLASS_NAME, 'btn-primary')
-# submit.click()
-
-# time.sleep(1)
-# cookies = driver.get_cookies()
-
-
-# session = requests.Session()
-# session.headers.update({'User-Agent': driver.execute_script("return navigator.userAgent;")})
-# driver.quit()
-# for cookie in cookies:
-#     session.cookies.update({cookie['name']: cookie['value']})
-
-# import requests
-# session = requests.Session()
-
-# params = {'iDisplayStart': 0, 'iDisplayLength': 6500, 'mDataProp_12': 'created_at', 'bSortable_12': 'true', 'iSortCol_0': 12, 'sSortDir_0': 'desc', 'iSortingCols': 1}
-# response = session.get("https://korolev.hookah.work/sale/data", params=params)
-
-# response = session.get("https://korolev.hookah.work/sale/data?iDisplayStart=0&iDisplayLength=6500&mDataProp_12=created_at&bSortable_12=true&iSortCol_0=12&sSortDir_0=desc&iSortingCols=1")
-# response = session.get("https://korolev.hookah.work/sale/data?iDisplayStart=0&iDisplayLength=6500&mDataProp_12=created_at&bSortable_12=true&iSortCol_0=12&sSortDir_0=desc&iSortingCols=1")
-# response = session.get("https://korolev.hookah.work/sale/data?iDisplayStart=0&iDisplayLength=6500&mDataProp_12=created_at&bSortable_12=true&iSortCol_0=12&sSortDir_0=desc&iSortingCols=1")
-# response = session.get("https://korolev.hookah.work/sale/data?iDisplayStart=0&iDisplayLength=6500&mDataProp_12=created_at&bSortable_12=true&iSortCol_0=12&sSortDir_0=desc&iSortingCols=1")
-# response = session.get("https://korolev.hookah.work/sale/data?iDisplayStart=0&iDisplayLength=6500&mDataProp_12=created_at&bSortable_12=true&iSortCol_0=12&sSortDir_0=desc&iSortingCols=1")
-# response = session.get("https://korolev.hookah.work/sale/data?iDisplayStart=0&iDisplayLength=6500&mDataProp_12=created_at&bSortable_12=true&iSortCol_0=12&sSortDir_0=desc&iSortingCols=1")
-# response = session.get("https://korolev.hookah.work/sale/data?iDisplayStart=0&iDisplayLength=6500&mDataProp_12=created_at&bSortable_12=true&iSortCol_0=12&sSortDir_0=desc&iSortingCols=1")
-# data = response.json()
-
-
-
-# sales = data['data']
-# sales[0]['total']
-# sales[0]['client_id']
-
-# From test request
-##############################################
-##############################################
-##############################################
-##############################################
-class Sale: 
-    title: str
-    price: str
-    amount: int
-    payment_method: str
-    client: str
-    time_added: datetime
 
 class Scrapper:
-    html: list = []
-    data: list = []
+    data: list[Sale]
 
     def __init__(self, url: str, email: str, password: str):
         self.url = url
@@ -102,9 +32,8 @@ class Scrapper:
         submit = self.driver.find_element(By.CLASS_NAME, 'btn-primary')
         submit.click()
 
-        # time.sleep(1)
+        time.sleep(1)
         cookies = self.driver.get_cookies()
-
 
         session = requests.Session()
         session.headers.update({'User-Agent': self.driver.execute_script("return navigator.userAgent;")})
@@ -112,29 +41,17 @@ class Scrapper:
         for cookie in cookies:
             session.cookies.update({cookie['name']: cookie['value']})
 
+        list_of_data = []
 
-        number_of_database_elements = session.get("https://korolev.hookah.work")
-        iterations = number_of_database_elements.json()
-        # FIXME: Change to proper name
-        itreations = iterations['iNumberOfElements'] // 6500
-        i = 1
+        params = {'iDisplayStart': 0, 'iDisplayLength': 100, 'mDataProp_12': 'created_at', 'bSortable_12': 'true',
+                  'iSortCol_0': 12, 'sSortDir_0': 'desc', 'iSortingCols': 1}
+        response = session.get("https://korolev.hookah.work/sale/data", params=params)
+        list_of_data.append(response.json()['data'])
+        self.clean_data_new(list_of_data)
+        return self.data
 
-        response = None
-        while i < itreations:
-            params = {'iDisplayStart': i, 'iDisplayLength': iterations, 'mDataProp_12': 'created_at', 'bSortable_12': 'true', 'iSortCol_0': 12, 'sSortDir_0': 'desc', 'iSortingCols': 1}
-            response += session.get("https://korolev.hookah.work/sale/data", params=params)
-            i *= 6500 
-
-        dict = response.json()
-         
-
-    
-    def scan(self) -> dict:
-        self.driver.get(self.url)
-
-        self.html = []
-
-        # Wait for the email input element to be present
+    def scan(self) -> list:
+        self.driver.get("https://korolev.hookah.work/")
         email_input = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.ID, 'loginform-email'))
         )
@@ -145,68 +62,51 @@ class Scrapper:
         submit = self.driver.find_element(By.CLASS_NAME, 'btn-primary')
         submit.click()
 
-        # Wait for the "Продажи" link to be present 
-        sales = WebDriverWait(self.driver, 10).until(
-            EC.presence_of_element_located((By.LINK_TEXT, 'Продажи'))
-        )
-        sales.click()
+        time.sleep(1)
+        cookies = self.driver.get_cookies()
 
-        # Wait for the page to be fully loaded
-        WebDriverWait(self.driver, 10).until(EC.title_is(self.driver.title))
-        list = WebDriverWait(self.driver, 10).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, 'select.form-control'))
-        )
-
-        list.click()
-        option = self.driver.find_element(By.XPATH, ".//option[text()='100']")
-
-        option.click()
-
-        wait = WebDriverWait(self.driver, 10)
-        div = wait.until(EC.visibility_of_element_located((By.ID, "sales_paginate")))
-        ul = div.find_element(By.CLASS_NAME,"pagination")
-        li = ul.find_element(By.ID, "sales_next")
-        a = li.find_element(By.TAG_NAME, "a")
-            
-        iter = 0
-
-        li = ul.find_element(By.ID, "sales_next")
-        while "disabled" not in li.get_attribute("class") and iter < 20:
-            iter += 1
-            a.click()
-            div = wait.until(EC.visibility_of_element_located((By.ID, "sales_paginate")))
-            ul = div.find_element(By.CLASS_NAME,"pagination")
-            li = ul.find_element(By.ID, "sales_next")
-            a = li.find_element(By.TAG_NAME, "a")
-            self.html.append(self.driver.page_source)
-            
-
+        session = requests.Session()
+        session.headers.update({'User-Agent': self.driver.execute_script("return navigator.userAgent;")})
         self.driver.quit()
+        for cookie in cookies:
+            session.cookies.update({cookie['name']: cookie['value']})
 
-        self.clean_data(self.html)
+        number_of_database_elements = session.get("https://korolev.hookah.work/sale/data")
+        number_of_database_elements = int(number_of_database_elements.json()['iTotalRecords'])
+        iterations = number_of_database_elements // 6500
+        i = 0
+
+        list_of_data = []
+        while i < iterations:
+            i += 1
+            params = {'iDisplayStart': i * 6500 - 6500, 'iDisplayLength': 6500, 'mDataProp_12': 'created_at',
+                      'bSortable_12': 'true', 'iSortCol_0': 12, 'sSortDir_0': 'desc', 'iSortingCols': 1}
+            response = session.get("https://korolev.hookah.work/sale/data", params=params)
+            list_of_data.append(response.json()['data'])
+
+        last_item = number_of_database_elements - 6500 * iterations
+        params = {'iDisplayStart': i * 6500, 'iDisplayLength': last_item, 'mDataProp_12': 'created_at',
+                  'bSortable_12': 'true', 'iSortCol_0': 12, 'sSortDir_0': 'desc', 'iSortingCols': 1}
+        response = session.get("https://korolev.hookah.work/sale/data", params=params)
+        list_of_data.append(response.json()['data'])
+
+        self.clean_data_new(list_of_data)
 
         return self.data
 
-    
-    def clean_data(self, html: list):
-
+    def clean_data_new(self, list_of_data: list):
         locale.setlocale(locale.LC_TIME, 'ru_RU.UTF-8')
-        for page in html:
-            soup = BeautifulSoup(page, 'html.parser')
-
-            rows = soup.find_all('tr', class_=['odd', 'even'])
-
-            for row in rows:
-                tds = row.find_all('td')
+        for data_item in list_of_data:
+            for sale_item in data_item:
                 sale = Sale()
-                sale.title = tds[1].text.strip()
-                sale.price = float(tds[4].text.strip())
-                sale.amount = int(re.search(r'\d', tds[3].text.strip()).group())
-                sale.payment_method = tds[5].text.strip()
-                sale.client = tds[9].text.strip()
-                sale.time_added = self.convert_to_datetime(tds[12].text.strip())
+                sale.title = sale_item['product_id']
+                sale.price = float(sale_item['total'])
+                sale.amount = 1
+                sale.payment_method = sale_item['payment_method_id'].strip()
+                sale.client = sale_item['client_id'].strip()
+                sale.time_added = self.convert_to_datetime(sale_item['created_at'].strip())
                 self.data.append(sale)
-            
+
     def convert_to_datetime(self, string: str) -> datetime:
         string = self.match_datetime(string)
         datetime_string = datetime.strptime(string, "%d %b. %Y г., %H:%M:%S")
@@ -217,7 +117,7 @@ class Scrapper:
             "февр.": "фев.",
             "сент.": "сен.",
             "нояб.": "ноя.",
-            "мая" : "мая."
+            "мая": "мая."
         }
 
         for full, abbreviation in months.items():

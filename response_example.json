@@ -1,0 +1,15 @@
+{
+    "actions": "<a href="/sale/edit/53370" data-target="#modal" data-toggle="modal" class="btn btn-xs btn-primary" rel="tooltip" data-title="Редактировать"><i class="fa fa-pencil"></i></a>", 
+    "product_id": "УЛУН Земляничный", 
+    "price": "400",
+    "count": "<span class="pull-left text-muted">x</span><span class="pull-right text-muted">=</span>1", 
+    "total": 400, 
+    "payment_method_id": "наличными", 
+    "storage_id": "-", 
+    "count_storage": "", 
+    "booking_id": "<a href="/booking/info/25761" data-target="#modal" data-toggle="modal" class="btn btn-xs btn-default" role="button">#25761</a>", 
+    "client_id": "Гимальдинов Борис Игоревич", 
+    "seller_id": "Лиза адм",
+    "notes": "-", 
+    "created_at": "20 янв. 2023 г., 21:24:38"
+}
