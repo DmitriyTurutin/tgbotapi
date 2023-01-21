@@ -4,8 +4,9 @@ from fastapi.responses import FileResponse
 from datetime import datetime, timedelta
 import pickle
 import os
+from Entities.User import User
 from dotenv import load_dotenv
-
+from UseCases.UserService.UserService import UserService
 from UseCases.WebScrapping.WebScrapperService import WebScrapperService
 
 router = APIRouter()
@@ -31,49 +32,57 @@ class SalesRequest(BaseModel):
 
 @router.get("/get_user")
 async def get_user(request: UserRequest):
-    # FIXME 
-    # goes to get user service and 
-    #   - if user exists returns the user 
-    #       user repository should have check_user method that checks if user with specified url and email exists
-    #       user repository should have get_user method that returns the user with specified url and email
-    #   - if user does not exist creates user and return user
-    #       user repository should have create user method that creates user 
-    return {"response": "success"}
+    userService = UserService()
+    user = userService.get_user(request.email, request.url, request.password)
+    global user_data 
+    user_data = user
+    return user 
 
 @router.get("/update")
-async def update(request: UpdateRequest):
+async def update():
+    global user_data
+    user = user_data
     scrapper = WebScrapperService()
-    scrapper.login(address=request.url,
-                   email=request.email, password=request.password)
+    scrapper.login(address=user.url,
+                   email=user.email, password=user.password)
     return {"response": "success"}
 
 
 @router.get("/scan")
-async def scan(request: UpdateRequest):
+async def scan():
+    global user_data
+    user = user_data
     scrapper = WebScrapperService()
-    scrapper.scan(url=request.url,
-                  email=request.email, password=request.password)
+    scrapper.set_email_url(user.email, user.url)
+    scrapper.scan(url=user.url,
+                  email=user.email, password=user.password)
     return {"response": "success"}
 
 
 @router.get("/sales")
 async def get_sales(time_period: SalesRequest):
+    global user_data
+    user = user_data
     scrapper = WebScrapperService()
-    sales = scrapper.get_from_to(time_period.from_date, time_period.to_date)
+    sales = scrapper.get_from_to(time_period.from_date, time_period.to_date, user.email, user.url)
     return sales
 
 
 @router.get("/sales/today")
 async def get_sales_today():
+    global user_data
+    user = user_data
     scrapper = WebScrapperService()
-    sales = scrapper.get_today()
+    sales = scrapper.get_today(user.email, user.url)
     return sales
 
 
 @router.get("/sales/last_month")
 async def get_last_month():
+    global user_data
+    user = user_data
     scrapper = WebScrapperService()
-    sales = scrapper.get_last_month()
+    sales = scrapper.get_last_month(user.email, user.url)
     return sales
 
 
@@ -88,7 +97,7 @@ async def download_file(file_name: str):
 
 @router.get("/predict")
 async def predict(unique_visitors: int):
-    loaded_model = pickle.load(open('./Storage/linear_regression_model.pkl', 'rb'))
+    loaded_model = pickle.load(open('./Storage/gradient_boosting_regressor_model_user_1.pkl', 'rb'))
 
     today = datetime.now()
     one_day = timedelta(1)

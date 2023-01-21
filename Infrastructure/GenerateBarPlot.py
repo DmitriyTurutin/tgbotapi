@@ -5,7 +5,7 @@ import numpy as np
 
 
 class GenerateBarPlot:
-    def generate_bar_plot(self, sales_data):
+    def generate_bar_plot(self, sales_data, i):
         # Extract the hour from each timestamp and count the number of sales for each hour
         hour_counts = Counter(sale[5].hour for sale in sales_data)
         # Get the hours and counts from the Counter object
@@ -25,4 +25,4 @@ class GenerateBarPlot:
         plt.ylabel("Кол-во заказов")
 
         # Save the plot to an image file
-        plt.savefig('./Storage/sales.png')
+        plt.savefig(f'./Storage/sales_{i}.png')
