@@ -1,4 +1,4 @@
-from fastapi import APIRouter, File, HTTPException
+from fastapi import APIRouter, File, HTTPException, Depends
 from pydantic import BaseModel
 from fastapi.responses import FileResponse
 from datetime import datetime, timedelta
@@ -18,11 +18,27 @@ class UpdateRequest(BaseModel):
     email: str
     password: str
 
+class UserRequest(BaseModel):
+    url: str
+    email: str
+    password: str
+
 
 class SalesRequest(BaseModel):
     from_date: datetime
     to_date: datetime
 
+
+@router.get("/get_user")
+async def get_user(request: UserRequest):
+    # FIXME 
+    # goes to get user service and 
+    #   - if user exists returns the user 
+    #       user repository should have check_user method that checks if user with specified url and email exists
+    #       user repository should have get_user method that returns the user with specified url and email
+    #   - if user does not exist creates user and return user
+    #       user repository should have create user method that creates user 
+    return {"response": "success"}
 
 @router.get("/update")
 async def update(request: UpdateRequest):

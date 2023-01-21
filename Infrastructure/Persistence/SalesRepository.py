@@ -14,17 +14,13 @@ class SalesRepository:
     conn = None
     cur = None
 
-    # host = os.environ['HOST']
-    # port = env.int('PORT')
-    # user = os.environ['USER']
-    # password = os.environ['PASSWORD']
-    # database = os.environ['DATABASE']
+    host = os.environ['HOST']
+    port = env.int('PORT')
+    user = os.environ['USER']
+    password = os.environ['PASSWORD']
+    database = os.environ['DATABASE']
 
-    host = 'localhost'
-    port = 5432
-    user = 'myuser'
-    password = 'mypass'
-    database = 'mydb'
+
 
     def __init__(self):
         # Connect to the database and create table if not exists
