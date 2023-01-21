@@ -19,6 +19,7 @@ class UpdateRequest(BaseModel):
     email: str
     password: str
 
+
 class UserRequest(BaseModel):
     url: str
     email: str
@@ -34,9 +35,10 @@ class SalesRequest(BaseModel):
 async def get_user(request: UserRequest):
     userService = UserService()
     user = userService.get_user(request.email, request.url, request.password)
-    global user_data 
+    global user_data
     user_data = user
-    return user 
+    return user
+
 
 @router.get("/update")
 async def update():
@@ -64,7 +66,8 @@ async def get_sales(time_period: SalesRequest):
     global user_data
     user = user_data
     scrapper = WebScrapperService()
-    sales = scrapper.get_from_to(time_period.from_date, time_period.to_date, user.email, user.url)
+    sales = scrapper.get_from_to(
+        time_period.from_date, time_period.to_date, user.email, user.url)
     return sales
 
 
@@ -86,10 +89,34 @@ async def get_last_month():
     return sales
 
 
-@router.get("/download/{file_name}")
-async def download_file(file_name: str):
-    if os.path.isfile(f"./Storage/{file_name}"):
-        return FileResponse(f"./Storage/{file_name}")
+# @router.get("/download/{file_name}")
+# async def download_file(file_name: str):
+#     if os.path.isfile(f"./Storage/{file_name}"):
+#         return FileResponse(f"./Storage/{file_name}")
+
+#     else:
+#         return HTTPException(status_code=404, detail="File not found")
+
+
+@router.get("/get_excel")
+async def get_excel():
+    global user_data
+    user = user_data
+    file_path = f"./Storage/sales_{user.email}.xlsx"
+    if os.path.isfile(file_path):
+        return FileResponse(file_path)
+
+    else:
+        return HTTPException(status_code=404, detail="File not found")
+
+
+@router.get("/get_barplot")
+async def get_barplot():
+    global user_data
+    user = user_data
+    file_path = f"./Storage/sales_{user.email}.png"
+    if os.path.isfile(file_path):
+        return FileResponse(file_path)
 
     else:
         return HTTPException(status_code=404, detail="File not found")
@@ -97,7 +124,10 @@ async def download_file(file_name: str):
 
 @router.get("/predict")
 async def predict(unique_visitors: int):
-    loaded_model = pickle.load(open('./Storage/gradient_boosting_regressor_model_user_1.pkl', 'rb'))
+    global user_data
+    user = user_data
+    loaded_model = pickle.load(
+        open(f'./Storage/gradient_boosting_regressor_model_{user.email}.pkl', 'rb'))
 
     today = datetime.now()
     one_day = timedelta(1)
@@ -112,12 +142,3 @@ async def predict(unique_visitors: int):
     result = result[0]
 
     return {"prediction": result}
-
-# @router.get("/predict")
-# async def predict(unique_visitors: int,week_day: int, month: int):
-#     with open('./Storage/model.pkl', 'rb') as f:
-#         model = pickle.load(f)
-
-#     type(model)
-#     prediction = model.predict([week_day, month, unique_visitors])
-#     return {"prediction": prediction}

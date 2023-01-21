@@ -156,15 +156,14 @@ class Repository:
     # Retrive for today
 
     def get_today(self, email: str, url: str):
-        current_date = datetime.now().date()
-        one_month_ago = current_date - timedelta(days=1)
-
+        current_date = datetime.now().date() + timedelta(days=1)
+        one_day_ago = datetime.now().date()
         self.cur.execute(
             "SELECT * FROM users WHERE email=%s and url=%s", (email, url))
         id = self.cur.fetchone()[0]
         table = "sales_" + str(id)
 
-        self.cur.execute(f"SELECT * FROM {table} WHERE time_added BETWEEN %s AND %s", (one_month_ago, current_date))
+        self.cur.execute(f"SELECT * FROM {table} WHERE time_added BETWEEN %s AND %s", (one_day_ago, current_date))
         return self.cur.fetchall()
 
 

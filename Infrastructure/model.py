@@ -5,7 +5,6 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
 import os
-import logging
 
 
 class Model:
@@ -19,8 +18,6 @@ class Model:
 
     def generate_model(self):
         self.sales_data = self.repository.get_all(self.email, self.url)
-        user = self.repository.get_user(self.email, self.url)
-        id = user[0]
 
         # Create a DataFrame from the query results
         self.df = pd.DataFrame(self.sales_data, columns=[
@@ -58,11 +55,10 @@ class Model:
 
         # evaluate the model on the test data
         score = grid_search.score(X_test, y_test)
-        logging.info("Model for provided data trained")
-        logging.info("Test score: %s", score)
+        print(f"Test score: {score}")
 
         # save the model to disk
-        filename = f'./Storage/gradient_boosting_regressor_model_user_{id}.pkl'
+        filename = f'./Storage/gradient_boosting_regressor_model_{self.email}.pkl'
         pickle.dump(grid_search, open(filename, 'wb'))
         if os.path.exists(filename):
             print("Model saved successfully")

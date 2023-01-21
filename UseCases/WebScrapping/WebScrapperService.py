@@ -1,5 +1,4 @@
 from datetime import datetime
-from Infrastructure.Persistence.SalesRepository import SalesRepository
 from Infrastructure.ScrapperService import Scrapper
 from Infrastructure.GenerateExcel import GenerateExcel
 from Infrastructure.Persistence.Repository import Repository
@@ -9,15 +8,14 @@ from Infrastructure.model import Model
 import concurrent.futures
 
 
-
 class WebScrapperService:
     repository = Repository()
 
     generateExcel = GenerateExcel()
     plotGenerator = GenerateBarPlot()
+
     def set_email_url(self, email, url):
         self.model = Model(email, url)
-
 
     def login(self, address: str, email: str, password: str) -> None:
         scrapper_service = Scrapper(address, email, password)
@@ -36,34 +34,14 @@ class WebScrapperService:
         if sales is not None:
             for sale in sales:
                 self.repository.add_sales_data(email, url, sale)
-                self.model.generate_model()
+            self.model.generate_model()
         else:
             print("Sales is none!!")
-        # with concurrent.futures.ThreadPoolExecutor() as executor:
-        #     scrapper_future = executor.submit(Scrapper(url, email, password).scan)
-        #     sales = scrapper_future.result()
-        #     if sales:
-        #         with concurrent.futures.ThreadPoolExecutor() as executor:
-        #             self.salesRepository.add(sales)
-        #             # self.model.generate_model()
-        #     else:
-        #         print("Sales is none!!")
-
-    # def scan(self, url: str, email: str, password: str):
-    #     scrapper_service = Scrapper(url, email, password)
-    #     sales: list[Sale] = scrapper_service.scan()
-    #     print(sales[0])
-    #     if sales is not None:
-    #         for sale in sales:
-    #             self.salesRepository.add(sale)
-    #         self.model.generate_model()
-    #     else:
-    #         print("Sales is none!!")
 
     def get_from_to(self, from_date: datetime, to_date: datetime, email, url):
         data = self.repository.get_time_period(from_date, to_date, email, url)
-        self.generateExcel.generate_excel(data)
-        self.plotGenerator.generate_bar_plot(data)
+        self.generateExcel.generate_excel(data, email)
+        self.plotGenerator.generate_bar_plot(data, email)
         return data
 
     def get_today(self, email, url):
