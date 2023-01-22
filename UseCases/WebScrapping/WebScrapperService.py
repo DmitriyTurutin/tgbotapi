@@ -21,19 +21,18 @@ class WebScrapperService:
         scrapper_service = Scrapper(address, email, password)
         sales: list[Sale] = scrapper_service.scan_first_page()
 
-        if sales is not None:
-            for sale in sales:
-                self.repository.add_sales_data(email, address, sale)
+        if sales:
+            self.repository.add_sales_data(email, address, sales)
         else:
-            print("Sales is none!!")
+            print("No Sales Found!!")
+
 
     def scan(self, url: str, email: str, password: str):
         scrapper_service = Scrapper(url, email, password)
         sales: list[Sale] = scrapper_service.scan()
 
         if sales is not None:
-            for sale in sales:
-                self.repository.add_sales_data(email, url, sale)
+            self.repository.add_sales_data(email, url, sales)
             self.model.generate_model()
         else:
             print("Sales is none!!")

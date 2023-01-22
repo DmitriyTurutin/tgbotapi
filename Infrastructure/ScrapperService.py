@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import json
 import requests
+import concurrent.futures
 from datetime import datetime
 from Entities.Sale import Sale
 import requests
@@ -19,7 +20,12 @@ class Scrapper:
         self.url = url
         self.email = email
         self.password = password
-        self.driver = webdriver.Firefox()
+        options = webdriver.ChromeOptions()
+        options.add_argument('--headless')
+        options.add_argument('--disable-gpu')
+
+        self.driver = webdriver.Chrome(chrome_options=options)
+
 
     def scan_first_page(self) -> list:
         self.driver.get("https://korolev.hookah.work/")
@@ -33,7 +39,10 @@ class Scrapper:
         submit = self.driver.find_element(By.CLASS_NAME, 'btn-primary')
         submit.click()
         
-        time.sleep(1)
+        wait = WebDriverWait(self.driver, 10)
+        wait.until(EC.presence_of_element_located((By.ID, "table-booking-container")))
+
+
         cookies = self.driver.get_cookies()
 
         session = requests.Session()
@@ -78,22 +87,28 @@ class Scrapper:
         i = 0
 
         list_of_data = []
-        while i < iterations:
-            i += 1
-            params = {'iDisplayStart': i * 6500 - 6500, 'iDisplayLength': 6500, 'mDataProp_12': 'created_at',
-                      'bSortable_12': 'true', 'iSortCol_0': 12, 'sSortDir_0': 'desc', 'iSortingCols': 1}
-            response = session.get("https://korolev.hookah.work/sale/data", params=params)
-            list_of_data.append(response.json()['data'])
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            results = [executor.submit(self.get_data, i, session) for i in range(iterations)]
+
+            for future in concurrent.futures.as_completed(results):
+                list_of_data.append(future.result())
 
         last_item = number_of_database_elements - 6500 * iterations
         params = {'iDisplayStart': i * 6500, 'iDisplayLength': last_item, 'mDataProp_12': 'created_at',
-                  'bSortable_12': 'true', 'iSortCol_0': 12, 'sSortDir_0': 'desc', 'iSortingCols': 1}
+                'bSortable_12': 'true', 'iSortCol_0': 12, 'sSortDir_0': 'desc', 'iSortingCols': 1}
         response = session.get("https://korolev.hookah.work/sale/data", params=params)
         list_of_data.append(response.json()['data'])
 
         return_data = self.clean_data_new(list_of_data)
 
         return return_data
+
+    
+    def get_data(self, i: int, session: requests.Session) -> dict:
+        params = {'iDisplayStart': i * 6500 - 6500, 'iDisplayLength': 6500, 'mDataProp_12': 'created_at',
+                'bSortable_12': 'true', 'iSortCol_0': 12, 'sSortDir_0': 'desc', 'iSortingCols': 1}
+        response = session.get("https://korolev.hookah.work/sale/data", params=params)
+        return response.json()['data']
 
     def clean_data_new(self, list_of_data: list):
         locale.setlocale(locale.LC_TIME, 'ru_RU.UTF-8')

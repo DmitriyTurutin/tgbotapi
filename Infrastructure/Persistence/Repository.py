@@ -3,6 +3,7 @@ from Entities.User import User
 import os
 from environs import Env
 from Entities.Sale import Sale
+import concurrent.futures
 import io
 from dotenv import load_dotenv
 from datetime import datetime, timedelta
@@ -122,22 +123,35 @@ class Repository:
 
     # Add data to the table
 
-    def add_sales_data(self, email: str, url: str, sale: Sale):
+    def add_sales_data(self, email: str, url: str, sales: list[Sale]):
+        self.conn.commit()
         self.cur.execute(
             "SELECT * FROM users WHERE email=%s and url=%s", (email, url))
         id = self.cur.fetchone()[0]
         table = "sales_" + str(id)
 
-        self.cur.execute(f"""
-        INSERT INTO {table}(title, price, amount, payment_method, client, time_added)
-        VALUES (%s, %s, %s, %s, %s, %s)
-        ON CONFLICT (time_added) DO NOTHING
-        """, (sale.title, sale.price, sale.amount, sale.payment_method, sale.client, sale.time_added))
+        self.cur.execute(f"CREATE INDEX IF NOT EXISTS time_added_index ON {table} (time_added);")
+
+
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            for sales_batch in self.chunks(sales, 1000):
+                executor.submit(self.insert_sales, table,
+                                sales_batch, self.cur)
 
         updated_at = datetime.now()
         self.cur.execute(
             "UPDATE users SET last_updated = %s WHERE id = %s", (updated_at, id))
         self.conn.commit()
+
+    def chunks(self, lst, n):
+        """Yield successive n-sized chunks from lst."""
+        for i in range(0, len(lst), n):
+            yield lst[i:i + n]
+
+    def insert_sales(self, table: str, sales: list[Sale], cur: psycopg2.extensions.cursor) -> None:
+        cur.executemany(f"INSERT INTO {table}(title, price, amount, payment_method, client, time_added) VALUES (%s, %s, %s, %s, %s, %s) ON CONFLICT (time_added) DO NOTHING", [
+                        (sale.title, sale.price, sale.amount, sale.payment_method, sale.client, sale.time_added) for sale in sales])
+        cur.connection.commit()
 
     # Retrive data for one month
 
@@ -163,11 +177,12 @@ class Repository:
         id = self.cur.fetchone()[0]
         table = "sales_" + str(id)
 
-        self.cur.execute(f"SELECT * FROM {table} WHERE time_added BETWEEN %s AND %s", (one_day_ago, current_date))
+        self.cur.execute(
+            f"SELECT * FROM {table} WHERE time_added BETWEEN %s AND %s", (one_day_ago, current_date))
         return self.cur.fetchall()
 
-
     # Get all data
+
     def get_all(self, email: str, url: str):
         self.cur.execute(
             "SELECT * FROM users WHERE email=%s and url=%s", (email, url))
@@ -205,7 +220,7 @@ class Repository:
         for sale in sales:
             if not sale.title:
                 pass
-            else: 
+            else:
                 f.write(sale.title + '\t' + str(sale.price) + '\t' + str(sale.amount) + '\t' + sale.payment_method +
                         '\t' + sale.client + '\t' + sale.time_added.strftime("%Y-%m-%d %H:%M:%S"))
                 f.write('\n')
