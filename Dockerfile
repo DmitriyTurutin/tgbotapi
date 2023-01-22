@@ -1,20 +1,33 @@
-# Use an official Python runtime as the base image
-FROM python:3.11-slim
+FROM python:3.10
 
-# Set the working directory
+ENV PYTHONUNBUFFERED 1
+
+# Install Chrome
+RUN apt-get update \
+  && apt-get install -y \
+  chromium \
+  && rm -rf /var/lib/apt/lists/*
+
+# Install ChromeDriver
+RUN CHROME_DRIVER_VERSION=`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE` \
+    && curl -sS -o /tmp/chromedriver_linux64.zip http://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip \
+    && unzip /tmp/chromedriver_linux64.zip -d /usr/local/bin
+
+# Install additional dependencies
+RUN apt-get install -y libnss3 \
+    && apt-get install -y libgconf-2-4
+
+RUN mkdir /app
 WORKDIR /app
 
-# Copy the requirements file
-COPY requirements.txt .
+COPY requirements.txt /app/
 
-# Install the dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 
-# Copy the rest of the application files
-COPY . .
+COPY . /app/
 
-# Expose the port the app will run on
 EXPOSE 8000
 
-# Run the command to start the app
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--", "--no-sandbox", "--disable-dev-shm-usage"]
+

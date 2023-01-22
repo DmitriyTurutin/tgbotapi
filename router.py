@@ -5,13 +5,11 @@ from datetime import datetime, timedelta
 import pickle
 import os
 from Entities.User import User
-from dotenv import load_dotenv
 from UseCases.UserService.UserService import UserService
 from UseCases.WebScrapping.WebScrapperService import WebScrapperService
 
 router = APIRouter()
 
-load_dotenv()
 
 
 class UpdateRequest(BaseModel):

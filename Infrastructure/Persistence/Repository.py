@@ -18,12 +18,12 @@ class Repository:
     conn = None
     cur = None
 
-    host = os.environ['HOST']
-    port = env.int('PORT')
-    user = os.environ['USER']
-    password = os.environ['PASSWORD']
-    database = os.environ['DATABASE']
-
+    host = os.environ['DATABASE_URL']
+    port = env.int('DATABASE_PORT')
+    user = os.environ['DATABASE_USER']
+    password = os.environ['DATABASE_PASSWORD']
+    database = os.environ['DATABASE_NAME']
+    
     def __init__(self):
         # set connection
         self.conn = psycopg2.connect(
