@@ -42,10 +42,13 @@ async def get_user(request: UserRequest):
 async def update():
     global user_data
     user = user_data
-    scrapper = WebScrapperService()
-    scrapper.login(address=user.url,
-                   email=user.email, password=user.password)
-    return {"response": "success"}
+    if user is not None:
+        scrapper = WebScrapperService()
+        scrapper.login(address=user.url,
+                    email=user.email, password=user.password)
+        return {"response": "success"}
+
+    raise HTTPException(status_code=403, detail="User not specified!")
 
 
 @router.get("/scan")

@@ -24,6 +24,12 @@ class Repository:
     password = os.environ['DATABASE_PASSWORD']
     database = os.environ['DATABASE_NAME']
     
+    # host = 'localhost'
+    # port = 5432
+    # user = 'myuser'
+    # password = 'mypassword' 
+    # database = 'mydatabase'
+    
     def __init__(self):
         # set connection
         self.conn = psycopg2.connect(
@@ -59,7 +65,7 @@ class Repository:
             amount integer,
             payment_method text,
             client text,
-            time_added timestamp
+            time_added timestamp UNIQUE
         );"""
         self.cur.execute(create_template_sales_table_statement)
         self.conn.commit()
@@ -68,12 +74,12 @@ class Repository:
         create_function_statement = f"""
         CREATE OR REPLACE FUNCTION create_sales_table() RETURNS TRIGGER AS $$
         BEGIN
-            EXECUTE 'CREATE TABLE sales_' || NEW.id || ' (LIKE sales INCLUDING ALL) INHERITS (sales);';
+            EXECUTE 'CREATE TABLE sales_' || NEW.id || ' (LIKE sales_template INCLUDING ALL) INHERITS (sales_template);';
             RETURN NEW;
         END;
         $$ LANGUAGE plpgsql;
         """
-        self.cur.execute(create_template_sales_table_statement)
+        self.cur.execute(create_function_statement)
         self.conn.commit()
 
         # create trigger
@@ -90,11 +96,11 @@ class Repository:
             self.cur.execute(create_trigger_statement)
             self.conn.commit()
 
-        # create_index_statement = f"""
-        # CREATE INDEX users_email_url_idx ON users(email, url);
-        # """
-        # self.cur.execute(create_index_statement)
-        # self.conn.commit()
+        create_index_statement = f"""
+        CREATE INDEX IF NOT EXISTS users_email_url_idx ON users(email, url);
+        """
+        self.cur.execute(create_index_statement)
+        self.conn.commit()
 
     # Check if user exists method
 
@@ -163,7 +169,7 @@ class Repository:
         id = self.cur.fetchone()[0]
         table = 'sales_' + str(id)
 
-        self.cur.execute(f"SELECT * FROM {table} WHERE time_added BETWEEN %s AND %s",
+        self.cur.execute(f"SELECT * FROM {table} WHERE time_added BETWEEN %s AND %s ORDER BY time_added DESC",
                          (one_month_ago, current_date))
         return self.cur.fetchall()
 
@@ -179,6 +185,8 @@ class Repository:
 
         self.cur.execute(
             f"SELECT * FROM {table} WHERE time_added BETWEEN %s AND %s", (one_day_ago, current_date))
+
+        
         return self.cur.fetchall()
 
     # Get all data

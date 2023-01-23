@@ -23,6 +23,8 @@ class Scrapper:
         options = webdriver.ChromeOptions()
         options.add_argument('--headless')
         options.add_argument('--disable-gpu')
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
 
         self.driver = webdriver.Chrome(chrome_options=options)
 
@@ -40,8 +42,8 @@ class Scrapper:
         submit.click()
         
         wait = WebDriverWait(self.driver, 10)
-        wait.until(EC.presence_of_element_located((By.ID, "table-booking-container")))
 
+        time.sleep(1)
 
         cookies = self.driver.get_cookies()
 

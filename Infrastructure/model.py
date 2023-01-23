@@ -18,7 +18,7 @@ class Model:
 
     def generate_model(self):
         self.sales_data = self.repository.get_all(self.email, self.url)
-
+        self.sales_data = list(map(lambda element: element[1:], self.sales_data))
         # Create a DataFrame from the query results
         self.df = pd.DataFrame(self.sales_data, columns=[
                                'title', 'price', 'amount', 'payment_method', 'client', 'time_added'])

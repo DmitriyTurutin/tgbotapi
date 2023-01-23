@@ -39,18 +39,21 @@ class WebScrapperService:
 
     def get_from_to(self, from_date: datetime, to_date: datetime, email, url):
         data = self.repository.get_time_period(from_date, to_date, email, url)
+        data = list(map(lambda element: element[1:], data))
         self.generateExcel.generate_excel(data, email)
         self.plotGenerator.generate_bar_plot(data, email)
         return data
 
     def get_today(self, email, url):
         data = self.repository.get_today(email, url)
+        data = list(map(lambda element: element[1:], data))
         self.generateExcel.generate_excel(data, email)
         self.plotGenerator.generate_bar_plot(data, email)
         return data
 
     def get_last_month(self, email, url):
         data = self.repository.get_last_month(email, url)
+        data = list(map(lambda element: element[1:], data))
         self.generateExcel.generate_excel(data, email)
         self.plotGenerator.generate_bar_plot(data, email)
         return data
